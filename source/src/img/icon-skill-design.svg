@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="105px" height="105px" viewBox="0 0 105 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>icon-skill-design</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-5" sketch:type="MSArtboardGroup" transform="translate(-406.000000, -15.000000)">
+            <g id="skills" sketch:type="MSLayerGroup" transform="translate(18.000000, 17.000000)">
+                <g id="design" transform="translate(390.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M50.5,101 C78.3903812,101 101,78.3903812 101,50.5 C101,22.6096188 78.3903812,0 50.5,0 C22.6096188,0 0,22.6096188 0,50.5 C0,78.3903812 22.6096188,101 50.5,101 Z" id="bg" stroke="#253136" stroke-width="4"></path>
+                    <g transform="translate(14.000000, 15.000000)">
+                        <ellipse id="Oval-12" stroke="#253136" stroke-width="3.04347826" transform="translate(49.786565, 21.765800) rotate(-310.000000) translate(-49.786565, -21.765800) " cx="49.7865654" cy="21.7658" rx="20.5434783" ry="8.94021739"></ellipse>
+                        <path d="M64.1597872,36.0684564 C63.8961007,36.5978617 63.5467996,37.0521932 63.1084897,37.4199789 C59.32611,40.5937722 47.2154035,34.7041061 40.5079453,24.1056446 C48.0313457,25.5099789 61.3680799,27.7143492 62.6786589,25.0800019 C64.1252378,28.1974344 64.8607416,31.0895261 64.7751879,33.3845548 C65.1538323,31.8977845 65.5313741,30.7929952 65.6834512,31.5303697 C66.274135,34.3944126 65.7427056,47.9007337 65.2743848,49.7790657 C64.5282603,52.7716078 62.3557413,53.4988397 60.043228,52.9222654 C57.7307146,52.3456911 56.2397286,50.7050453 56.9858531,47.7125032 C57.7319777,44.7199612 63.7857935,37.9116553 63.7857935,37.9116553 C63.7857935,37.9116553 63.9389426,37.1118738 64.1597872,36.0684564 Z" id="Oval-12" fill="#253136"></path>
+                        <path d="M11.1861352,13.249635 L11.1861354,51.4908279 C11.1861354,51.4908279 11.2194772,61.3998233 31.8282659,61.3998186 C52.4370546,61.3998128 52.6220365,51.4908279 52.6220365,51.4908279 L52.6220363,13.249635" id="Rectangle-60" stroke="#253136" stroke-width="3.04347826" transform="translate(31.904086, 37.324727) rotate(-310.000000) translate(-31.904086, -37.324727) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -17,6 +17,13 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sub
   &:after { clear: both; }
 }
 
+body.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 @mixin transition($duration, $properties: all, $delay: 0s) {
   @if $properties == "all"{
     -webkit-transition: all $duration ease-in-out $delay;
@@ -27,6 +34,27 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sub
     transition-timing-function: ease-in-out;
     transition-delay: $delay;
   }
+}
+
+@mixin subscribe($duration, $delay, $delay-two) {
+  -webkit-transition:
+    max-width $duration ease-in-out $delay,
+    margin $duration ease-in-out $delay,
+    padding $duration ease-in-out $delay,
+    opacity $duration ease-in-out $delay-two;
+
+  transition:
+    max-width $duration ease-in-out $delay,
+    margin $duration ease-in-out $delay,
+    padding $duration ease-in-out $delay,
+    opacity $duration ease-in-out $delay-two;
+}
+
+@mixin rotate($degree)
+{
+    transform:rotate(#{$degree}deg);
+    -ms-transform:rotate(#{$degree}deg); /* IE 9 */
+    -webkit-transform:rotate(#{$degree}deg); /* Safari and Chrome */
 }
 
 

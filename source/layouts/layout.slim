@@ -1,26 +1,98 @@
 doctype html
 html
-  head
-    title Title
+head
+  title Ian Forsyth
 
-    meta charset='utf-8'
-    meta name='viewport' content='initial-scale=1'
-    meta name='description' content=''
-    meta name='robots' content='index, follow'
-    meta name='googlebot' content='index, follow'
+  meta charset='utf-8'>
+  meta name='viewport' content='initial-scale=1'
+  meta name='description' content='Ian Forsyth is a web and mobile developer who dabbles in design. He&rsquo;s currently a computer science student at Yale University, a developer at Quinlan, and available for freelance work. Feel free to get in touch.'
+  meta name='robots' content='index, follow'
+  meta name='googlebot' content='index, follow'
 
-    meta property='og:title' content=''
-    meta property='og:type' content='website'
-    meta property='og:url' content='/'
-    meta property='og:site_name' content=''
-    meta property='og:description' content=''
+  meta property='og:title' content='Ian Forsyth'
+  meta property='og:type' content='website'
+  meta property='og:url' content='/'
+  meta property='og:site_name' content='Ian Forsyth'
+  meta property='og:description' content='Ian Forsyth is a web and mobile developer who dabbles in design. He&rsquo;s currently a computer science student at Yale University, a developer at Quinlan, and available for freelance work. Feel free to get in touch.'
 
-    == partial 'favicon'
-    == partial 'ga-code'
-    = stylesheet_link_tag 'style'
-    /![if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]
-  body
-    == yield
+  == partial 'favicon'
+  == partial 'ga-code'
+  = stylesheet_link_tag 'style'
+  /![if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]
 
-    script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'
-    = javascript_include_tag  'script'
+body.preload.home
+  #nav-bar
+    img src='/src/img/mountains.svg' alt='Ian Forsyth Logo'
+    a href='/' Ian Forsyth
+    a id='contact' href='mailto:ian@ianforsyth.com'
+      img src='/src/img/icon-contact.svg' alt='Contact Ian Forsyth'
+    #mobile-nav
+      div
+      div
+      div
+
+  nav.clearfix
+    .wrap
+      a href='/'
+        img src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
+      h1
+        a href='/' Ian Forsyth
+      .menu
+        a href='/#services' WHEELHOUSE
+        a href='/#work' LATEST WORK
+        a href='/#about' MEET ME
+        a href='/#musings' MUSINGS
+      .blogs
+        h2
+          | BLOGS
+          span
+        a href='/design-and-develop'
+          | DESIGN &amp; DEVELOP
+          span
+        a href='/the-wheels-spin'
+          | THE WHEELS SPIN
+          span
+        a href='/bucket-list'
+          | BUCKET LIST
+          span
+
+  == yield
+
+  footer#footer
+    .logo
+      img#logo-gray src='/src/img/logo-ian-forsyth-gray.svg' alt='Ian Forsyth Logo Gray'
+      a href='/'
+        img#logo-color src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
+    .social
+      a target='_blank' href='http://www.strava.com/athletes/ianforsyth'
+        img src='/src/img/icon-social-strava-gray.svg' alt='Ian Forsyth Strava'
+        span
+          img src='/src/img/icon-social-strava-color.svg' alt='Ian Forsyth Strava'
+      a target='_blank' href='https://twitter.com/iforsyth91'
+        img src='/src/img/icon-social-twitter-gray.svg' alt='Ian Forsyth Twitter'
+        span
+          img src='/src/img/icon-social-twitter-color.svg' alt='Ian Forsyth Twitter'
+      a target='_blank' href='https://github.com/ianforsyth'
+        img src='/src/img/icon-social-github-gray.svg' alt='Ian Forsyth GitHub'
+        span
+          img src='/src/img/icon-social-github-color.svg' alt='Ian Forsyth GitHub'
+      a target='_blank' href='http://www.linkedin.com/in/ianrforsyth'
+        img src='/src/img/icon-social-linkedin-gray.svg' alt='Ian Forsyth LinkedIn'
+        span
+          img src='/src/img/icon-social-linkedin-color.svg' alt='Ian Forsyth LinkedIn'
+      a target='_blank' href='http://dribbble.com/ianforsyth'
+        img src='/src/img/icon-social-dribbble-gray.svg' alt='Ian Forsyth Dribbble'
+        span
+          img src='/src/img/icon-social-dribbble-color.svg' alt='Ian Forsyth Dribbble'
+
+    #subscribe
+      p#subscribe-button SUBSCRIBE
+      input#subscribe-text type='email' name='email' placeholder='Email' value='>'
+      p#subscribe-submit Submit
+
+    #copyright
+      p Ian Forsyth 2013
+
+  script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'
+  script type='text/javascript' src='src/js/swipe.js'
+  = javascript_include_tag  'script'

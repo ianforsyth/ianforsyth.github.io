@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="105px" height="105px" viewBox="0 0 105 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>icon-skill-learning</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-5" sketch:type="MSArtboardGroup" transform="translate(-536.000000, -15.000000)">
+            <g id="skills" sketch:type="MSLayerGroup" transform="translate(18.000000, 17.000000)">
+                <g id="learning" transform="translate(520.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M50.5,101 C78.3903812,101 101,78.3903812 101,50.5 C101,22.6096188 78.3903812,0 50.5,0 C22.6096188,0 0,22.6096188 0,50.5 C0,78.3903812 22.6096188,101 50.5,101 Z" id="bg" stroke="#253136" stroke-width="4"></path>
+                    <g transform="translate(20.000000, 27.000000)">
+                        <path d="M2.1686747,2.65060241 L2.1686747,43.8554217 C2.1686747,43.8554217 7.94804217,40.3614435 17.8680346,40.3614458 C27.7880271,40.3614495 30.6024096,43.8554217 30.6024096,43.8554217 L30.6024096,2.65060241 C30.6024096,2.65060241 25.0668298,0.183544729 16.3855422,0.183546687 C7.70425452,0.1835487 2.1686747,2.65060241 2.1686747,2.65060241 Z" id="Rectangle-60" stroke="#253136" stroke-width="1.68674699"></path>
+                        <path d="M0.103539157,5.10730422 L0.103539157,45.1402485 L31.4368043,45.1402485" id="Path-319" stroke="#253136" stroke-width="2.89156627"></path>
+                        <path d="M59.0361446,2.65060241 L59.0361446,43.8554217 C59.0361446,43.8554217 53.2567771,40.3614435 43.3367846,40.3614458 C33.4167922,40.3614495 30.6024096,43.8554217 30.6024096,43.8554217 L30.6024096,2.65060241 C30.6024096,2.65060241 36.1379895,0.183544729 44.8192771,0.183546687 C53.5005648,0.1835487 59.0361446,2.65060241 59.0361446,2.65060241 Z" id="Rectangle-60" stroke="#253136" stroke-width="1.68674699"></path>
+                        <path d="M28.5372741,5.10730422 L28.5372741,45.1402485 L59.8705393,45.1402485" id="Path-319" stroke="#253136" stroke-width="2.89156627" transform="translate(44.203907, 25.123776) scale(-1, 1) translate(-44.203907, -25.123776) "></path>
+                        <polygon id="Triangle-1" fill="#253136" points="30.8147627 40.2762109 35.2532236 47.9638507 26.3763018 47.9638507 "></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
