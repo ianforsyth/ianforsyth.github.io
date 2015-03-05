@@ -13,6 +13,16 @@ require 'slim'
 #   page "/admin/*"
 # end
 
+
+activate :blog do |blog|
+  blog.prefix = 'blog'
+  blog.permalink = '{title}.html'
+  blog.default_extension = '.slim'
+  page "blog/*", :layout => :article_layout
+end
+
+page '/tester.html', :layout => :article_layout
+
 activate :directory_indexes
 
 set :css_dir, 'src/style'
