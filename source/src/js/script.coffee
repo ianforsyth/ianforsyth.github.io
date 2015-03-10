@@ -1,5 +1,5 @@
 centerHeroAndMenuText = ->
-  $('#hero .wrap').css 'margin-top', '-' + $('#hero .wrap').height() / 2 + 'px'
+  $('.hero .hero-wrap').css 'margin-top', '-' + $('.hero .hero-wrap').height() / 2 + 'px'
   if $('nav .wrap').height() + 40 > $('nav').height()
     $('nav .wrap').css
       'margin-top': '0px'
@@ -44,12 +44,12 @@ $ ->
   # Center hero text
   centerHeroAndMenuText()
   # Inital page setup animations
-  $('#hero .overlay').css 'opacity': '1'
-  $('#hero .wrap').css
+  $('.hero .overlay').css 'opacity': '1'
+  $('.hero .hero-wrap').css
     'margin-top': '+=32px'
     'opacity': '0'
-  $('#hero .overlay').delay(500).animate { 'opacity': '.9' }, 1000
-  $('#hero .wrap').delay(500).animate {
+  $('.hero .overlay').delay(500).animate { 'opacity': '.9' }, 1000
+  $('.hero .hero-wrap').delay(500).animate {
     'margin-top': '-=20px'
     'opacity': '1'
   }, 750
