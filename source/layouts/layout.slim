@@ -21,40 +21,31 @@ head
   /![if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]
 
 body.preload.home
-  #nav-bar
-    img src='/src/img/mountains.svg' alt='Ian Forsyth Logo'
-    a href='/' Ian Forsyth
-    a id='contact' href='mailto:ian@ianforsyth.com'
+  .navbar
+    a.navbar-homelink href='/' Ian Forsyth
+    .navbar-menubutton
+      div
+      div
+      div
+    a.navbar-contactlink href='mailto:ian@ianforsyth.com'
       img src='/src/img/icon-contact.svg' alt='Contact Ian Forsyth'
-    #mobile-nav
-      div
-      div
-      div
 
-  nav.clearfix
-    .wrap
-      a href='/'
+  .navmenu
+    .navmenu-wrap
+      a.navmenu-logo href='/'
         img src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
-      h1
+      h1.navmenu-homelink
         a href='/' Ian Forsyth
-      .menu
-        a href='/#services' WHEELHOUSE
-        a href='/#work' LATEST WORK
-        a href='/#about' MEET ME
-        a href='/#musings' MUSINGS
-      .blogs
-        h2
-          | BLOGS
-          span
-        a href='/design-and-develop'
-          | DESIGN &amp; DEVELOP
-          span
-        a href='/the-wheels-spin'
-          | THE WHEELS SPIN
-          span
-        a href='/bucket-list'
-          | BUCKET LIST
-          span
+      .navmenu-sitelinks
+        a.navmenu-sitelinks-link href='/#services' WHEELHOUSE
+        a.navmenu-sitelinks-link href='/#work' LATEST WORK
+        a.navmenu-sitelinks-link href='/#about' MEET ME
+        a.navmenu-sitelinks-link href='/#musings' MUSINGS
+      .navmenu-bloglinks
+        h2.navmenu-bloglinks-title BLOGS
+        a.navmenu-bloglinks-link href='/design-and-develop' DESIGN &amp; DEVELOP
+        a.navmenu-bloglinks-link href='/the-wheels-spin' THE WHEELS SPIN
+
 
   == yield
 

@@ -53,17 +53,19 @@ $ ->
     'margin-top': '-=20px'
     'opacity': '1'
   }, 750
+
   # Navigation animation
-  $('#mobile-nav').click ->
-    if !$('nav').hasClass('open')
-      $('#mobile-nav').addClass 'open'
-      $('nav').addClass 'open'
+  $('.navbar-menubutton').click ->
+    if !$('.navmenu').hasClass('open')
+      $('.navbar-menubutton').addClass 'open'
+      $('.navmenu').addClass 'open'
       scroll_position = $('body').scrollTop()
     else
-      $('#mobile-nav').removeClass 'open'
-      $('nav').removeClass 'open'
+      $('.navbar-menubutton').removeClass 'open'
+      $('.navmenu').removeClass 'open'
       $('body').scrollTop scroll_position
     return
+
   # Close navigation if selection doesn't leave page.
   $('nav a').click ->
     if $('#home-flag').length > 0

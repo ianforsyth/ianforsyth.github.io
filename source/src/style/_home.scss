@@ -1,46 +1,13 @@
-#nav-bar { position:fixed; height:4rem; z-index:50; background:white; width:100%; padding:1rem 3%; box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.33); top:0;
-  img { width:2rem; }
-  #contact { background:#3E6F82; position:absolute; right:4.5rem; top:0; width:4.5rem; text-align:center; height:4.1rem; }
-  #contact img { width:3rem; margin-top:1rem; }
-  #mobile-nav { width:4.5rem; height:4.1rem; position:absolute; cursor:pointer; right:0; top:0; background:$charcoal; padding:.85rem .8rem;
-    div { width:100%; height:.4rem; background:white; position:relative; @include rotate(0); @include transition(.35s); top:0; }
-    div:not(:first-of-type) { margin-top:.5rem; }
-    &.open {
-      div:nth-of-type(1) { @include rotate(45); top:.9rem; }
-      div:nth-of-type(2) { opacity:0; }
-      div:nth-of-type(3) { @include rotate(-45); top:-.9rem; }
-    }
-  }
-}
 
-nav { color:white; position:fixed; top:0; width:150%; height:100%; z-index:40; background:$charcoal; padding:0 50% 0 0; text-align:center; overflow-y:scroll; left:100%; @include transition(.35s);
-  .wrap { position:absolute; top:50%; left:0; right:31%; }
-  a { color:white; }
-  h1 { font-size:5rem; font-weight:600; text-align:center; margin-top:2rem; }
-  .menu { text-align:center; @include clearfix; max-width:400px; margin:1rem auto 0 auto;
-    a { font-size:2rem; font-weight:900; display:block; margin:1rem 0 0 0; }
-    a:nth-of-type(odd) { float:left; clear:left;  }
-    a:nth-of-type(even) { float:right; }
-  }
-  .blogs { max-width:600px; margin:2rem auto 0 auto;  @include clearfix; color:white; background:$charcoal;
-    h2 { margin:0 0 2rem 0; font-size:2.6rem; font-weight:800; }
-    h2 span { background:white; }
-    a { text-align:center; font-weight:800; font-size:1.8rem; display:block; margin-top:.5rem; }
-  }
-  &.open { left:0; }
-  @media(max-width:375px) {
-    .menu a { font-size:1.8rem; }
-    .blogs a { font-size:1.6rem; }
-  }
-}
+
+///////////////////
+
+
 
 .home {
   section { padding:5rem 0; text-align:center; position:relative; }
   section > * { text-align:left; }
   .wrap { max-width:1280px; margin:0 auto; padding:0 5%; }
-  h2 { font-weight:800; font-size:3.2rem; position:relative; display:inline-block; margin:0 auto 5rem auto; }
-  h2 span { height:3px; position:absolute; width:60%; background:$charcoal; left:20%; bottom:-1rem; }
-
   #hero { background:url(../img/hero.jpg); background-size:cover; text-align:center; min-height:50rem; color:white; height:100%; position:relative;
     .overlay { height:100%; width:100%; background:$charcoal; position:absolute; top:0; left:0; opacity:.9; }
     .wrap { position:absolute; top:50%; left:0; right:0; margin:auto;  }
