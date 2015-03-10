@@ -16,8 +16,10 @@ require 'slim'
 
 activate :blog do |blog|
   blog.prefix = 'blog'
-  blog.permalink = '{title}.html'
+  blog.permalink = 'blog/{title}'
   blog.default_extension = '.slim'
+  blog.paginate = true
+  blog.per_page = 2
   page "blog/*", :layout => :article_layout
 end
 

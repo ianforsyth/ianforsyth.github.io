@@ -1,0 +1,95 @@
+---
+  title: Yale Cycling Website3
+  tags: Case Study, SVG, jQuery, API
+  date: 2013/10/9
+  excerpt: "The Yale University cycling team asked me to redesign the website and bring it up to date. As a member of the team myself, I was happy to help out. The main goal was to create a responsive, mobile ready layout for the student and cycling fan on the go. But, I also wanted the site to serve as a reference. To minimize the amount of redundant emails the team captains received I created a specific section for cyclists new to Yale and New Haven. There's also a totally revamped rides section to promote group riding and the school's cycling community."
+---
+
+p The Yale University cycling team asked me to redesign the website and bring it up to date. As a member of the team myself, I was happy to help out. The main goal was to create a responsive, mobile ready layout for the student and cycling fan on the go. But, I also wanted the site to serve as a reference. To minimize the amount of redundant emails the team captains received I created a specific section for cyclists new to Yale and New Haven. There's also a totally revamped rides section to promote group riding and the school's cycling community.
+
+a href="http://yale.edu/cycling" target="_blank" class="button" SEE THE SITE
+
+p
+  | I had mostly free-reign on the design (special thanks to
+  a href="http://micahbarrett.info/" Micah Barrett
+  | for helping me out along the way) so I used this project as a chance to experiment, use some newer technologies, and implement great outside libraries.
+
+
+p
+  | A major part of making the website mobile friendly was being sure it looked great on retina displays. I wanted to take full advantage of Apple's revolutionary technology and give its users the experience they deserved. That meant implementing SVG images for logos and icons and
+  a href="http://retinajs.com/" retina.js
+  | for photos. Although the SVG format can be found regularly throughout my website and blog, the Yale cycling website was really my first time using them. I jumped into Illustrator and recreated the Eastern Collegiate Cycling Conference (
+  a href="http://collegiatecycling.org/eccc/wiki/" ECCC
+  | ) and Ivy League logos. They scale beautifully with the responsive layout and look crisp on retina equipped iPhones.
+
+#svg-logos
+  img src="/src/img/blog-img/eccc-logo.svg" alt="Eastern Collegiate Cycling Conference Logo"
+  img src="/src/img/blog-img/ivy-logo.svg" alt="Ivy League Logo"
+
+
+p But normal .png and .jpg images have their place in every site, so I turned to retina.js. It's a fantastic tool and although I see it becoming obsolete in the future with the development of new image standards and types, it's perfect for the time at hand. If you've ever done iOS development, you know the naming convention for retina scale images is to append @2x to the end of the filename. Same principle applies for retina.js. The 3kb min version of the script checks through your images after page load and replaces them with the available high resolution versions. It's a no brainer to implement and the little bit of extra work to save out the @2x images is worth it when retina screen users are looking at crisp photos.
+
+p I also used CSS as much as possible. Instead of using .png and .jpg images for buttons and other features, they were built up with backgrounds, border radii, solid shadows for a nearly-flat look, and text. Also, using this method, hover actions can be applied directly to the element itself, no
+
+
+p
+  | A general hurdle I had to overcome when coding this site, was that I was only allowed to use html, css, and javascript. That's a restriction the Yale puts on its club pages. No php would run and didn't want to dive back into asp.net for this little project. I found workarounds for most of the problems that arose but trying to pull in the latest tweet became a puzzle. In version 1.0 of the Twitter API, grabbing the latest tweet was an easy task. But, with the summer 2013 update to version 1.1 Twitter is requiring the almighty
+  a href="http://oauth.net/" OAuth
+  | authentication to get any information. This wasn't possible with the tools I was limited to.
+
+p
+  | After a lot of searching I found a solution.
+  a href="http://jasonmayes.com/projects/twitterApi/#sthash.92EvFBVS.dpbs" Twitter Fetcher
+  | is a great script created by
+  a href="http://jasonmayes.com/" Jason Mayes
+  | that scrapes the necessary information from a Twitter widget and exports it in a clean, easy to style snippet. The
+  a href="https://twitter.com/settings/widgets/new" Twitter widget
+  | is meant to be a portal you slap on your site and it gives a very standard looking feed. But, it comes in an iframe, like these things usually do and that makes styling impossible, so the widget looks out of place and sloppy. Mayes's solution allows you to customize everything down to the retweet, reply, and favorite buttons. It is a very well documented file and comes with a series of examples to get you started. My hat goes off to him for making this great tool and doing such a quality job.
+
+img#latest-tweet src="/src/img/blog-img/yale-cycling-tweet.png" alt="Latest Tweet Using Twitter Fetcher"
+
+p.caption Using the Twitter Fetcher library, I pulled in the latest tweet and styled it to match the site aesthetic.
+
+
+p
+  | Javascript and jquery libraries that are done right can really take the weight off a developer's shoulders and add a great extra dimension to a project. With responsive design such a buzz word right now, users (or at least fellow designers and developers) are thinning and widening their browser windows just for fun, just to see how the website handles the changes. With a lot of the Yale Cycling website pages consisting of simple gridded information (the
+  a href="http://www.yale.edu/cycling/rides/" rides
+  | ,
+  a href="http://www.yale.edu/cycling/team/" team
+  | , and
+  a href="http://www.yale.edu/cycling/history/" history
+  | pages I wanted them to do more than just blink into place with a media query.
+
+
+p
+  | Along comes
+  a href="http://masonry.desandro.com/" Masonry
+  |, a javascript layout library created by
+  a href="http://v3.desandro.com/" David DeSandro
+  | (a designer at Twitter). You plug the script into your project, again very well documented and easy to add, and suddenly the pieces of your grid are gracefully sliding into place with a window resize. Masonry goes much further than this simple task and can stack a grid based on the variable sizes of the items (lay it out like bricks in a wall...like a "mason" would) but I just wanted an extra little flair on the pages for anyone who was diligent enough to find it. Keeping everything centered and evenly spaced width-wise required a little bit of CSS work but I was happy with the end result.
+
+p
+  | One more custom piece to talk about is the styled Google map on the
+  a href="http://www.yale.edu/cycling/contact/" contact
+  | page. Google Maps API integration is not difficult and plenty of websites are doing but only recently have designers and developers started colorizing them and tweaking them to fit a consistent theme. The options are endless and it doesn't take much if you're looking for the grayed-out effect I went for on this page.
+
+img.yale-map src="/src/img/blog-img/yale-map.png" alt="Google Map Yale University"
+
+p.caption The styled map on the contact page. Uses toned down grays for the landscape with a custom marker image on a latitude/longitude coordinate.
+
+
+p
+  | It's a simple matter of adding some javascript arguments to the map initialization. Again, this is a very simple example, the options to style these maps are endless. (Check out this great
+  a href="http://gmaps- samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html" tool
+  | to test your styles.)
+
+
+
+
+
+p Other cool features to keep an eye out for are the colorized hover on the footer sponsor logos, the fixed background header image on the home page and history page, the great history content, and the minimal but striking rides page.
+
+p One of the main reasons this website needed such a face lift is it hadn't been touched since its last redesign in 2009 (also done by me). Four years is an eternity on the web and too much changes too rapidly to allow a project to sit and collect metaphorical dust. I plan to keep this site updated and continually moving forward. And of course, any edits I make will be documented right here.
+
+
+a.button href="http://yale.edu/cycling" target="_blank" SEE THE SITE

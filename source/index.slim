@@ -233,11 +233,12 @@ section#musings
     span
   .post
     h4
-      a href='#' Title
-    p.date Date
+      a href='#' = blog.articles[0].title
+    p.date = blog.articles[0].date.strftime('%b %e %Y')
     p.content
-      | Excerpt
-      a.read-on href='#' Read On...
+      = blog.articles[0].metadata[:page]['excerpt']
+      '
+      = link_to 'Read more…', blog.articles[0], class: 'read-on'
 
 section#other-blogs
     h3 OTHER BLOGS
