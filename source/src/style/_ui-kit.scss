@@ -15,3 +15,15 @@ $outside-padding: 3%;
 // Z-Index variables
 $zindex--navbar: 50;
 $zindex--navmenu: 40;
+
+// Common styles
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+}
