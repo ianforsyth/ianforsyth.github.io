@@ -44,11 +44,11 @@ $ ->
   # Center hero text
   centerHeroAndMenuText()
   # Inital page setup animations
-  $('.hero .overlay').css 'opacity': '1'
+  $('.hero .hero-overlay').css 'opacity': '1'
   $('.hero .hero-wrap').css
     'margin-top': '+=32px'
     'opacity': '0'
-  $('.hero .overlay').delay(500).animate { 'opacity': '.9' }, 1000
+  $('.hero .hero-overlay').delay(500).animate { 'opacity': '.9' }, 1000
   $('.hero .hero-wrap').delay(500).animate {
     'margin-top': '-=20px'
     'opacity': '1'
