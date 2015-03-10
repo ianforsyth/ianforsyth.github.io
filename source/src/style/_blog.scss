@@ -117,10 +117,14 @@ header img { width:100%; display:block; }
 
 #disqus_thread { max-width:80rem; padding:5%; margin:0 auto; }
 
-.blog { padding-top:4rem;
+.blog {
   #option-buttons {
     a { width:33.33%; }
     @media(max-width:500px) { a span { display:none; } }
+    &.post {
+      a { width:25%; }
+      @media(max-width:500px) { a { width:33.33%; } a:first-of-type { display:none; } }
+    }
   }
   #pagination { background:$charcoal; color:white; font-size:2rem; font-weight:800; @include clearfix; text-align:center; position:relative;
     a { line-height:6rem; padding:0 2px; }
@@ -131,9 +135,7 @@ header img { width:100%; display:block; }
   }
 }
 
-.post { padding-top:4rem;
-  #option-buttons {
-    a { width:25%; }
-    @media(max-width:500px) { a { width:33.33%; } a:first-of-type { display:none; } }
-  }
-}
+#svg-logos { text-align:center; }
+#svg-logos img:first-child { margin-right:5%!important; }
+#svg-logos img { width:40%!important; display:inline-block!important; vertical-align:bottom; border:none!important; background:none!important; }
+

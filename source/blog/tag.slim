@@ -1,0 +1,35 @@
+---
+pageable: true
+---
+
+#posts
+  - page_articles.each do |article|
+    article.clearfix
+      .content
+        .date
+          .month = article.date.strftime('%b')
+          .day = article.date.strftime('%d')
+          .year = article.date.year
+        h3
+          = link_to article.title, article
+        h4
+          ' By Ian Forsyth on
+          = article.date.strftime('%b %e,  %Y')
+        #tags
+          - article.tags.each do |tag|
+            .tag
+              = link_to tag, tag_path(tag)
+              = link_to tag, tag_path(tag)
+        p
+          = article.metadata[:page]['excerpt']
+          '
+          = link_to 'Read more…', article, class: 'read-on'
+
+#pagination
+  - if num_pages > 1
+    - if page_number > 1
+      = link_to '< PREV', prev_page, id: 'previous'
+    - (1..num_pages).each do |num|
+      = link_to num, "/blog/page/#{num}", class: "#{'active' if num == page_number}"
+    - if page_number != num_pages
+      = link_to 'NEXT >', next_page, id: 'next'

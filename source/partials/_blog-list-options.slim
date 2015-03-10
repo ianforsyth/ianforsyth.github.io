@@ -1,0 +1,23 @@
+#option-buttons
+  a.about
+    | ABOUT
+    span< ME
+  a.tags TAGS
+  a.search SEARCH
+
+#options
+  #option-about
+    img src="/src/img/ian-forsyth.jpg"
+    p
+      | I'm Ian Forsyth, a web and mobile developer from Buffalo, NY. I appreciate good design and love riding bikes. I'm currently a student at Yale University, just finished as a developer at Quinlan, and available for freelance work. Feel free to
+      a< href="mailto:ian@ianforsyth.com" get in touch
+      | .
+
+  #option-tags
+    - blog.tags.each do |tag, articles|
+      .tag
+        = link_to tag, tag_path(tag)
+        = link_to tag, tag_path(tag)
+
+  #option-search
+    input name="search" placeholder="Watcha looking for?"

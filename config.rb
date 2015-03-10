@@ -16,14 +16,18 @@ require 'slim'
 
 activate :blog do |blog|
   blog.prefix = 'blog'
-  blog.permalink = 'blog/{title}'
+  blog.permalink = ':title.html'
+
   blog.default_extension = '.slim'
+
   blog.paginate = true
   blog.per_page = 2
-  page "blog/*", :layout => :article_layout
-end
 
-page '/tester.html', :layout => :article_layout
+  blog.tag_template = 'blog/tag.html'
+  blog.taglink = ':tag/index.html'
+
+  page "/blog/*", :layout => :blog_layout
+end
 
 activate :directory_indexes
 

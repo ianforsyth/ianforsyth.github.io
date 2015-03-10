@@ -1,0 +1,26 @@
+- wrap_layout :layout do
+
+  .blog
+    section#title-description
+      h2 Blog Title
+      p Blog description goes here.
+
+    - if current_article
+      == partial 'blog-post-options'
+      h3 = current_article.title
+      h4
+        | By Ian Forsyth on
+        = current_article.date.strftime('%b %e,  %Y')
+      #post-tags
+        - current_article.tags.each do |tag|
+          .tag
+            = link_to tag, tag_path(tag)
+            = link_to tag, tag_path(tag)
+      #post
+        == yield
+    - else
+      == partial  'blog-list-options'
+      #posts
+        == yield
+
+
