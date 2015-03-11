@@ -5,7 +5,7 @@ openSubscribe = ->
 
 closeSubscribe = (text) ->
   $('#subscribe-button').delay(1000).queue (n) ->
-    $(this).text text
+    $(@).text text
     n()
     return
   $('#subscribe').removeClass 'active'
@@ -66,7 +66,7 @@ $ ->
   # Close navigation if selection doesn't leave page.
   $('nav a').click ->
     if $('#home-flag').length > 0
-      if $(this).parent().is('.menu')
+      if $(@).parent().is('.menu')
         $('#mobile-nav').removeClass 'open'
         $('navmenu').removeClass 'open'
     return
@@ -102,6 +102,32 @@ $ ->
       displayWittyMessage 0
     return
 
+  # Services controller
+  $('.next').click ->
+    current_index = $('.service-articles article.active').data('index')
+    next_index = if current_index == 4 then 1 else current_index + 1
+    slideFromTo(current_index, next_index, 'next')
+
+  $('.previous').click ->
+    current_index = $('.service-articles article.active').data('index')
+    next_index = if current_index == 1 then 4 else current_index - 1
+    slideFromTo(current_index, next_index, 'previous')
+
+  slideFromTo = (current_index, next_index, direction) ->
+    current_slide = $(".service-articles article[data-index='#{current_index}']")
+    next_slide = $(".service-articles article[data-index='#{next_index}']")
+    if direction == 'next'
+      next_slide.css({ left:'100%' })
+      next_slide.animate({ left:'0%' }, 1000)
+      current_slide.animate({ left:'-100%' }, 1000)
+    else if direction == 'previous'
+      next_slide.css({ left:'-100%' })
+      next_slide.animate({ left:'0%' }, 1000)
+      current_slide.animate({ left:'100%' }, 1000)
+
+    current_slide.removeClass('active')
+    next_slide.addClass('active')
+
   # Handle quote switching and size changing
   $('#quote-wrap').css 'height': $('.showing').height() + 'px'
   $('#inspiration .button').click ->
@@ -116,7 +142,7 @@ $ ->
       return
     $now.addClass 'fade'
     $next.delay(350).queue (n) ->
-      $(this).addClass 'slide'
+      $(@).addClass 'slide'
       n()
       return
     $('#quote-wrap').animate { 'height': $next.height() + 'px' }, 350, ->
@@ -129,17 +155,17 @@ $ ->
 
   # Blog options
   $('#option-buttons a').click ->
-    if $(this).attr('class') == 'back'
+    if $(@).attr('class') == 'back'
       return
-    if $(this).hasClass('active')
-      $(this).removeClass 'active'
-      $('#option-' + $(this).attr('class')).slideUp()
+    if $(@).hasClass('active')
+      $(@).removeClass 'active'
+      $('#option-' + $(@).attr('class')).slideUp()
     else
       $clicked = $('#option-buttons a.active')
       $clicked.removeClass 'active'
       $('#option-' + $clicked.attr('class')).slideUp()
-      $('#option-' + $(this).attr('class')).slideDown()
-      $(this).addClass 'active'
+      $('#option-' + $(@).attr('class')).slideDown()
+      $(@).addClass 'active'
     return
 
   # Disqus Comments
@@ -151,18 +177,3 @@ $ ->
       dsq.src = '//ianforsyth.disqus.com/embed.js'
       (document.getElementsByTagName('head')[0] or document.getElementsByTagName('body')[0]).appendChild dsq
       return
-
-  # Coming soon for incomplete projects
-  old_href = undefined
-
-  $('#work-samples article a').click (e) ->
-    if $(this).attr('href') == '#'
-      e.preventDefault()
-    return
-
-  window.mySwipe = $('#swipe').Swipe(
-    speed: 500
-    disableScroll: false).data('Swipe')
-  return
-
-

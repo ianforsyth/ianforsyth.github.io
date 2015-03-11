@@ -22,44 +22,41 @@ header.hero
         img src='src/img/icon-social-dribbble.svg' alt='Ian Forsyth Dribbble'
         img src='src/img/icon-social-dribbble-color.svg' alt='Ian Forsyth Dribbble'
 
-section#services
-  h2
-    | MY WHEELHOUSE
-    span
-  #swipe
-    .swipe-wrap
-      article#web-development
-        img src='src/img/icon-service-web-development.svg' alt='Web Development'
-        h3 WEB DEVELOPMENT
-        p
-          span
-          | I use research, inspiration, and the latest tools to construct an elegant final product. I build fast, responsive, efficient websites - always with great design in mind.
+.services
+  h2 MY WHEELHOUSE
+  .service-articles
+    article.active data-index='1'
+      img src='src/img/icon-service-web-development.svg' alt='Web Development'
+      h3 WEB DEVELOPMENT
+      p
+        span
+        | I use research, inspiration, and the latest tools to construct an elegant final product. I build fast, responsive, efficient websites - always with great design in mind.
 
-      article#responsive-design
-        img src='src/img/icon-service-responsive-design.svg' alt='Responsive Design'
-        h3 RESPONSIVE DESIGN
-        p
-          span
-          | Forget pre-packaged templates, grids, or frameworks. When I build websites they're made custom, flow perfectly to fit any device size, and are optimized for mobile users.
+    article data-index='2'
+      img src='src/img/icon-service-responsive-design.svg' alt='Responsive Design'
+      h3 RESPONSIVE DESIGN
+      p
+        span
+        | Forget pre-packaged templates, grids, or frameworks. When I build websites they're made custom, flow perfectly to fit any device size, and are optimized for mobile users.
 
-      article#ios-app-develeopment
-        img src='src/img/icon-service-ios-apps.svg' alt='iOS App Development'
-        h3 iOS APP DEVELOPMENT
-        p
-          span
-          | Bring your app idea to the iPhone and iPad. I design and code alongside Apple's guidelines to give your custom application the natural, native feel it deserves.
+    article data-index='3'
+      img src='src/img/icon-service-ios-apps.svg' alt='iOS App Development'
+      h3 iOS APP DEVELOPMENT
+      p
+        span
+        | Bring your app idea to the iPhone and iPad. I design and code alongside Apple's guidelines to give your custom application the natural, native feel it deserves.
 
-      article#bespoke-interfaces
-        img src='src/img/icon-service-bespoke-interfaces.svg' alt='Bespoke Interfaces'
-        h3 BESPOKE INTERFACES
-        p
-          span
-          | Data-driven websites and applications are no problem. Whether tapping into a third party API or constructing a back-end interface from scratch, I build to suit.
+    article data-index='4'
+      img src='src/img/icon-service-bespoke-interfaces.svg' alt='Bespoke Interfaces'
+      h3 BESPOKE INTERFACES
+      p
+        span
+        | Data-driven websites and applications are no problem. Whether tapping into a third party API or constructing a back-end interface from scratch, I build to suit.
 
   .buttons
-    button.previous onclick='mySwipe.prev()'
+    button.previous
       span
-    button.next onclick='mySwipe.next()'
+    button.next
       span
 
 section#work
@@ -169,58 +166,58 @@ section#about
         li Ruby On Rails
         li UI / UX Design
 
-section#inspiration
-  .bg#saint-exupery-bg
-    .overlay
-  .bg#da-vinci-bg
-    .overlay
-  .bg#kidd-bg
-    .overlay
-  .bg#lemond-bg
-    .overlay
-  .bg#glaser-bg
-    .overlay
-  .bg#jobs-bg
-    .overlay
+/ section#inspiration
+/   .bg#saint-exupery-bg
+/     .overlay
+/   .bg#da-vinci-bg
+/     .overlay
+/   .bg#kidd-bg
+/     .overlay
+/   .bg#lemond-bg
+/     .overlay
+/   .bg#glaser-bg
+/     .overlay
+/   .bg#jobs-bg
+/     .overlay
 
-  h2
-    | INSPIRATION
-    span
+/   h2
+/     | INSPIRATION
+/     span
 
-  #quote-wrap
-    #saint-exupery.showing
-      p.quote
-        | Perfection is achieved, not when there is nothing more to add,
-        | but when there is nothing left to take away.
-      p.author - Antoine de Saint-Exupery
+/   #quote-wrap
+/     #saint-exupery.showing
+/       p.quote
+/         | Perfection is achieved, not when there is nothing more to add,
+/         | but when there is nothing left to take away.
+/       p.author - Antoine de Saint-Exupery
 
-    #da-vinci
-      p.quote
-        | Websites are never finished, only abandoned.
-      p.author - Leonardo da Vinci (sort of)
+/     #da-vinci
+/       p.quote
+/         | Websites are never finished, only abandoned.
+/       p.author - Leonardo da Vinci (sort of)
 
-    #kidd
-      p.quote
-        | The best solution can usually be found in the best definition
-        | of the problem itself.
-      p.author - Chip Kidd
+/     #kidd
+/       p.quote
+/         | The best solution can usually be found in the best definition
+/         | of the problem itself.
+/       p.author - Chip Kidd
 
-    #lemond
-      p.quote
-        | It never gets easier, you just go faster.
-      p.author - Greg LeMond
+/     #lemond
+/       p.quote
+/         | It never gets easier, you just go faster.
+/       p.author - Greg LeMond
 
-    #glaser
-      p.quote
-        | Style is not to be trusted.
-      p.author - Milton Glaser
+/     #glaser
+/       p.quote
+/         | Style is not to be trusted.
+/       p.author - Milton Glaser
 
-    #jobs
-      p.quote
-        | It's not just what it looks and feels like. Design is how it works.
-      p.author - Steve Jobs
+/     #jobs
+/       p.quote
+/         | It's not just what it looks and feels like. Design is how it works.
+/       p.author - Steve Jobs
 
-  p.button &#x25BC
+/   p.button &#x25BC
 
 section#musings
   h2
