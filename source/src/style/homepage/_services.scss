@@ -1,0 +1,115 @@
+$services-breakpoint: 750px;
+
+.services {
+  background:white;
+  position:relative;
+}
+
+.services-wrap {
+  position:relative;
+  max-width:860px;
+  margin:0 auto;
+  overflow: hidden;
+}
+
+.service {
+  @include clearfix;
+  padding: 0 100px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+
+  &.active {
+    position: relative;
+    left: 0%;
+  }
+
+  @media(max-width: $services-breakpoint) { text-align:center; }
+}
+
+.service-icon {
+  float: left;
+  margin-right: 5%;
+  width: 38%;
+
+  @media(max-width: $services-breakpoint) {
+    float:none;
+    margin:0;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 30px;
+}
+
+.service-text {
+  margin-top: 10px;
+  line-height: 26px;
+  font-size: 18px;
+  position: relative;
+  width: 57%;
+  float: left;
+  padding: 10px 10px 10px 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 70%;
+    background: $charcoal;
+    top: 15%;
+    left: 0;
+  }
+
+  @media(max-width: $services-breakpoint) {
+    padding: 10px 0 0 0;
+    width: 100%;
+
+    &:before {
+      height: 3px;
+      width: 100px;
+      top: 0;
+      left: 50%;
+      margin-left: -50px;
+    }
+  }
+}
+
+.services-buttons {
+  position: absolute;
+  width: 100%;
+  top: 48%;
+
+  button {
+    @include transition(.5s);
+    background:$light-gray;
+    border:0px;
+    font-size:4.0rem;
+    position:absolute;
+    cursor:pointer;
+    outline:none;
+    width:50px;
+    height:40px;
+  }
+
+  .previous {
+    left:0px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    background: $light-gray url(../img/icon-arrow-left-gray.svg) center no-repeat;
+    &:hover { background: $charcoal url(../img/icon-arrow-left-charcoal.svg) center no-repeat; }
+  }
+
+  .next {
+    right:0px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    background: $light-gray url(../img/icon-arrow-right-gray.svg) center no-repeat;
+    &:hover {  background: $charcoal url(../img/icon-arrow-right-charcoal.svg) center no-repeat; }
+  }
+}

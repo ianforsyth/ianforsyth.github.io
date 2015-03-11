@@ -24,40 +24,27 @@ header.hero
 
 .services
   h2 MY WHEELHOUSE
-  .service-articles
-    article.active data-index='1'
-      img src='src/img/icon-service-web-development.svg' alt='Web Development'
-      h3 WEB DEVELOPMENT
-      p
-        span
-        | I use research, inspiration, and the latest tools to construct an elegant final product. I build fast, responsive, efficient websites - always with great design in mind.
+  .services-wrap
+    .service.active data-index='1'
+      img.service-icon src='src/img/icon-service-web-development.svg' alt='Web Development'
+      h3.service-title WEB DEVELOPMENT
+      p.service-text I use research, inspiration, and the latest tools to construct an elegant final product. I build fast, responsive, efficient websites - always with great design in mind.
+    .service data-index='2'
+      img.service-icon src='src/img/icon-service-responsive-design.svg' alt='Responsive Design'
+      h3.service-title RESPONSIVE DESIGN
+      p.service-text Forget pre-packaged templates, grids, or frameworks. When I build websites they're made custom, flow perfectly to fit any device size, and are optimized for mobile users.
+    .service data-index='3'
+      img.service-icon src='src/img/icon-service-ios-apps.svg' alt='iOS App Development'
+      h3.service-title iOS APP DEVELOPMENT
+      p.service-text Bring your app idea to the iPhone and iPad. I design and code alongside Apple's guidelines to give your custom application the natural, native feel it deserves.
+    .service data-index='4'
+      img.service-icon src='src/img/icon-service-bespoke-interfaces.svg' alt='Bespoke Interfaces'
+      h3.service-title BESPOKE INTERFACES
+      p.service-text Data-driven websites and applications are no problem. Whether tapping into a third party API or constructing a back-end interface from scratch, I build to suit.
 
-    article data-index='2'
-      img src='src/img/icon-service-responsive-design.svg' alt='Responsive Design'
-      h3 RESPONSIVE DESIGN
-      p
-        span
-        | Forget pre-packaged templates, grids, or frameworks. When I build websites they're made custom, flow perfectly to fit any device size, and are optimized for mobile users.
-
-    article data-index='3'
-      img src='src/img/icon-service-ios-apps.svg' alt='iOS App Development'
-      h3 iOS APP DEVELOPMENT
-      p
-        span
-        | Bring your app idea to the iPhone and iPad. I design and code alongside Apple's guidelines to give your custom application the natural, native feel it deserves.
-
-    article data-index='4'
-      img src='src/img/icon-service-bespoke-interfaces.svg' alt='Bespoke Interfaces'
-      h3 BESPOKE INTERFACES
-      p
-        span
-        | Data-driven websites and applications are no problem. Whether tapping into a third party API or constructing a back-end interface from scratch, I build to suit.
-
-  .buttons
+  .services-buttons
     button.previous
-      span
     button.next
-      span
 
 section#work
   .wrap

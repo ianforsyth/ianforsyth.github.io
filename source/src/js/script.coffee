@@ -104,18 +104,18 @@ $ ->
 
   # Services controller
   $('.next').click ->
-    current_index = $('.service-articles article.active').data('index')
+    current_index = $('.service.active').data('index')
     next_index = if current_index == 4 then 1 else current_index + 1
     slideFromTo(current_index, next_index, 'next')
 
   $('.previous').click ->
-    current_index = $('.service-articles article.active').data('index')
+    current_index = $('.service.active').data('index')
     next_index = if current_index == 1 then 4 else current_index - 1
     slideFromTo(current_index, next_index, 'previous')
 
   slideFromTo = (current_index, next_index, direction) ->
-    current_slide = $(".service-articles article[data-index='#{current_index}']")
-    next_slide = $(".service-articles article[data-index='#{next_index}']")
+    current_slide = $(".service[data-index='#{current_index}']")
+    next_slide = $(".service[data-index='#{next_index}']")
     if direction == 'next'
       next_slide.css({ left:'100%' })
       next_slide.animate({ left:'0%' }, 1000)
