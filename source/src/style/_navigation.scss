@@ -78,12 +78,10 @@
 }
 
 .navmenu-wrap {
-  height: 370px;
-  max-width: 400px;
+  @include vertical-align;
+  max-width: 450px;
   padding: 0 $outside-padding;
-  position: relative;
-  top: 50%;
-  margin: -185px auto 0 auto;
+  margin: 0 auto;
 }
 
 .navmenu-homelink {

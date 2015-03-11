@@ -22,6 +22,10 @@ displayWittyMessage = (counter) ->
     ), 42
   return
 
+$(window).on 'load', ->
+  $('body').removeClass 'preload'
+  return
+
 $(window).resize ->
   centerHeroAndMenuText()
   $('#quote-wrap').css 'height': $('#quote-wrap .showing').height() + 'px'
@@ -33,23 +37,19 @@ $(window).scroll ->
   $('header').css 'top': yPos
   return
 
-$(window).on 'load', ->
-  $('body').removeClass 'preload'
-  return
-
 $ ->
-  scroll_position = undefined
+  # scroll_position = undefined
 
-  # Inital page setup animations
-  $('.hero .hero-overlay').css 'opacity': '1'
-  $('.hero .hero-wrap').css
-    'margin-top': '+=32px'
-    'opacity': '0'
-  $('.hero .hero-overlay').delay(500).animate { 'opacity': '.9' }, 1000
-  $('.hero .hero-wrap').delay(500).animate {
-    'margin-top': '-=20px'
-    'opacity': '1'
-  }, 750
+  # # Inital page setup animations
+  # $('.hero .hero-overlay').css 'opacity': '1'
+  # $('.hero .hero-wrap').css
+  #   'margin-top': '+=32px'
+  #   'opacity': '0'
+  # $('.hero .hero-overlay').delay(500).animate { 'opacity': '.9' }, 1000
+  # $('.hero .hero-wrap').delay(500).animate {
+  #   'margin-top': '-=20px'
+  #   'opacity': '1'
+  # }, 750
 
   # Navigation animation
   $('.navbar-menubutton').click ->
@@ -151,5 +151,18 @@ $ ->
       dsq.src = '//ianforsyth.disqus.com/embed.js'
       (document.getElementsByTagName('head')[0] or document.getElementsByTagName('body')[0]).appendChild dsq
       return
+
+  # Coming soon for incomplete projects
+  old_href = undefined
+
+  $('#work-samples article a').click (e) ->
+    if $(this).attr('href') == '#'
+      e.preventDefault()
+    return
+
+  window.mySwipe = $('#swipe').Swipe(
+    speed: 500
+    disableScroll: false).data('Swipe')
+  return
 
 

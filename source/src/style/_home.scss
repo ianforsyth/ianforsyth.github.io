@@ -19,11 +19,8 @@
   }
 
  .hero-wrap {
-    position:absolute;
-    top:50%;
-    left:0;
-    right:0;
-    margin:auto;
+    @include vertical-align;
+    padding: 0 $outside-padding;
   }
 
   .hero-tagline {
