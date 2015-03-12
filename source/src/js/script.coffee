@@ -27,7 +27,6 @@ $(window).on 'load', ->
   return
 
 $(window).resize ->
-  centerHeroAndMenuText()
   $('#quote-wrap').css 'height': $('#quote-wrap .showing').height() + 'px'
   return
 
@@ -38,19 +37,6 @@ $(window).scroll ->
   return
 
 $ ->
-  # scroll_position = undefined
-
-  # # Inital page setup animations
-  # $('.hero .hero-overlay').css 'opacity': '1'
-  # $('.hero .hero-wrap').css
-  #   'margin-top': '+=32px'
-  #   'opacity': '0'
-  # $('.hero .hero-overlay').delay(500).animate { 'opacity': '.9' }, 1000
-  # $('.hero .hero-wrap').delay(500).animate {
-  #   'margin-top': '-=20px'
-  #   'opacity': '1'
-  # }, 750
-
   # Navigation animation
   $('.navbar-menubutton').click ->
     if !$('.navmenu').hasClass('open')

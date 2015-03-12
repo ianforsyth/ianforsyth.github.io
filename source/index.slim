@@ -46,51 +46,45 @@ header.hero
     button.previous
     button.next
 
-section#work
-  .wrap
-    h2 LATEST WORK
-    #work-samples
-      article
-        .description
-          h3 YALE CYCLING
-          p A new website for the Yale Cycling team, built for fans and prospective riders.
-          a href='/design-and-develop/2/yale-cycling-website' CASE STUDY
-        img class='sample' src='src/img/work/yale.jpg' alt='Yale Cycling'
-
-      article
-        .description
-          h3 WALDEN DEVELOPMENT GROUP
-          p A website built for Western New York's premier real estate developer - WDC.
-          a target='_blank' href='http://waldendevelopmentgroup.com' SEE THE SITE
-        img class='sample' src='src/img/work/walden.jpg' alt='Walden Development Group'
-
-      article
-        .description
-          h3 WRI CALCULATOR
-          p An iOS app used by WRI to calculate wire size and spacing based on bar designations.
-          a href='/design-and-develop/13/wri-calculator-app' CASE STUDY
-        img class='sample' src='src/img/work/wri.jpg' alt='WRI Calculator App'
-
-      article#work-programming
-        .description
-          h3 PROGRAMMING PROJECTS
-          p A collection of my pure code solutions including coding challenges and some algorithm work.
-          a href='#' COLLECTION
-        img class='sample' src='src/img/work/programming.jpg' alt='Programming Work'
-
-      article#work-illustrations
-        .description
-          h3 ILLUSTRATIONS
-          p A collection of illustrations and design work that I've done for fun on the side.
-          a href='/design-and-develop/6/illustrations-collection' COLLECTION
-        img class='sample' src='src/img/work/illustrations.jpg' alt='Illustrations'
-
-      article#work-trocaire-social-media
-        .description
-          h3 TROCAIRE SOCIAL MEDIA
-          p A one stop social media hub for Buffalo's Trocaire College.
-          a href='/design-and-develop/12/trocaire-college-social-media-hub' CASE STUDY
-        img class='sample' src='src/img/work/trocaire-social-media.jpg' alt='Trocaire College Social Media'
+.work
+  h2 LATEST WORK
+  .worksamples
+    .worksample
+      .worksample-description
+        .worksample-description-title Yale Cycling
+        .worksample-description-text A new website for the Yale Cycling team, built for fans and prospective riders.
+        a.worksample-description-link href='/design-and-develop/2/yale-cycling-website' CASE STUDY
+      img.worksample-image class='sample' src='src/img/work/yale.jpg' alt='Yale Cycling'
+    .worksample
+      .worksample-description
+        .worksample-description-title Walden Development Group
+        .worksample-description-text A website built for Western New York's premier real estate developer - WDC.
+        a.worksample-description-link target='_blank' href='http://waldendevelopmentgroup.com' SEE THE SITE
+      img.worksample-image class='sample' src='src/img/work/walden.jpg' alt='Walden Development Group'
+    .worksample
+      .worksample-description
+        .worksample-description-title WRI Calculator
+        .worksample-description-text An iOS app used by WRI to calculate wire size and spacing based on bar designations.
+        a.worksample-description-link href='/design-and-develop/13/wri-calculator-app' CASE STUDY
+      img.worksample-image class='sample' src='src/img/work/wri.jpg' alt='WRI Calculator App'
+    .worksample#work-programming
+      .worksample-description
+        .worksample-description-title Programming Projects
+        .worksample-description-text A collection of my pure code solutions including coding challenges and some algorithm work.
+        a.worksample-description-link href='#' COLLECTION
+      img.worksample-image class='sample' src='src/img/work/programming.jpg' alt='Programming Work'
+    .worksample#work-illustrations
+      .worksample-description
+        .worksample-description-title Illustrations
+        .worksample-description-text A collection of illustrations and design work that I've done for fun on the side.
+        a.worksample-description-link href='/design-and-develop/6/illustrations-collection' COLLECTION
+      img.worksample-image class='sample' src='src/img/work/illustrations.jpg' alt='Illustrations'
+    .worksample#work-trocaire-social-media
+      .worksample-description
+        .worksample-description-title Trocaire Social Media
+        .worksample-description-text A one stop social media hub for Buffalo's Trocaire College.
+        a.worksample-description-link href='/design-and-develop/12/trocaire-college-social-media-hub' CASE STUDY
+      img.worksample-image class='sample' src='src/img/work/trocaire-social-media.jpg' alt='Trocaire College Social Media'
 
 
 section#about
@@ -207,9 +201,7 @@ section#about
 /   p.button &#x25BC
 
 section#musings
-  h2
-    a href='/design-and-develop' MUSINGS
-    span
+  h2 From the Blog
   .post
     h4
       a href='#' = blog.articles[0].title
