@@ -182,27 +182,25 @@ header.hero
 
 /   p.button &#x25BC
 
-section#musings
+.musing
   h2 Latest Musing
-  .post
-    h4
-      a href='#' = blog.articles[0].title
-    p.date = blog.articles[0].date.strftime('%b %e, %Y')
-    .tags
+  .musing-wrap
+    a.musing-title href='#' = blog.articles[0].title
+    p.musing-date = blog.articles[0].date.strftime('%b %e, %Y')
+    .musing-tags
       - blog.articles[0].tags.each do |tag|
         .tag
           = link_to tag, tag_path(tag)
           = link_to tag, tag_path(tag)
-    p.content
+    p.musing-content
       = blog.articles[0].metadata[:page]['excerpt']
-      '
-      = link_to 'Read more…', blog.articles[0], class: 'read-on'
+      =< link_to 'Read more…', blog.articles[0], class: 'musing-readon'
 
-section#other-blogs
-    h3 BLOGS
-    a href='/the-wheels-spin'
-      img src='src/img/icon-blog-the-wheels-spin.svg' alt='The Wheels Spin'
-      span DESIGN &amp; DEVELOP
-    a href='/bucket-list'
-      img src='src/img/icon-blog-bucket-list.svg' alt='Bucket List'
-      span EVERYTHING ELSE
+.bloglinks
+  h2 Blogs
+  a.bloglink href='/the-wheels-spin'
+    img.bloglink-icon src='src/img/icon-blog-the-wheels-spin.svg' alt='The Wheels Spin'
+    span.bloglink-title DESIGN &amp; DEVELOP
+  a.bloglink href='/bucket-list'
+    img.bloglink-icon src='src/img/icon-blog-bucket-list.svg' alt='Bucket List'
+    span.bloglink-title EVERYTHING ELSE

@@ -2,64 +2,67 @@ $about-breakpoint-1: 1000px;
 $about-breakpoint-2: 700px;
 $about-breakpoint-3: 500px;
 
-.about { padding:5rem 5%; background:$light-gray;
+.about {
+  padding:5rem 5%;
+  background:$light-gray;
+}
 
-  .about-profile {
-    max-width:100%;
-    display: block;
-    margin: 0 auto;
-  }
+.about-profile {
+  max-width:100%;
+  display: block;
+  margin: 0 auto;
+}
 
-  .about-description {
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 25px;
-    line-height: 25px;
-    font-size: 18px;
-  }
+.about-description {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 25px;
+  line-height: 25px;
+  font-size: 18px;
+}
 
-  .about-skills {
-    @include clearfix;
-  }
+.about-skills {
+  @include clearfix;
+}
 
-  .about-skill {
-    float: left;
-    width: 33.33%;
-    margin-top: 50px;
+.about-skill {
+  float: left;
+  width: 33.33%;
+  margin-top: 50px;
+  text-align: center;
+
+  @media(max-width: $about-breakpoint-2) { width: 50%; }
+}
+
+.about-skill-wrap {
+  display: inline-block;
+  width: 220px;
+  margin: 0 auto;
+  text-align: left;
+
+  @media(max-width: $about-breakpoint-3) {
+    width: 110px;
     text-align: center;
-
-    @media(max-width: $about-breakpoint-2) { width: 50%; }
-  }
-
-  .about-skill-wrap {
-    display: inline-block;
-    width: 220px;
-    margin: 0 auto;
-    text-align: left;
-
-    @media(max-width: $about-breakpoint-3) {
-      width: 110px;
-      text-align: center;
-    }
-  }
-
-  .about-skill-icon {
-    float: left;
-    margin-right: 10px;
-
-    @media(max-width: $about-breakpoint-1) { width: 75px; }
-    @media(max-width: $about-breakpoint-3) { float: none; }
-  }
-
-  .about-skill-title {
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 5px 0 0 0;
-  }
-
-  .about-skill-tech {
-    margin-top: 3px;
   }
 }
+
+.about-skill-icon {
+  float: left;
+  margin-right: 10px;
+
+  @media(max-width: $about-breakpoint-1) { width: 75px; }
+  @media(max-width: $about-breakpoint-3) { float: none; }
+}
+
+.about-skill-title {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+
+.about-skill-tech {
+  margin-top: 3px;
+}
+
