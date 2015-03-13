@@ -182,25 +182,19 @@ header.hero
 
 /   p.button &#x25BC
 
-.musing
-  h2 Latest Musing
-  .musing-wrap
-    a.musing-title href='#' = blog.articles[0].title
-    p.musing-date = blog.articles[0].date.strftime('%b %e, %Y')
-    .musing-tags
+.blogpost
+  h2 Latest Post
+  .blogpost-wrap
+    a.blogpost-title href='#' = blog.articles[0].title
+    p.blogpost-date = blog.articles[0].date.strftime('%b %e, %Y')
+    .blogpost-tags
       - blog.articles[0].tags.each do |tag|
         .tag
           = link_to tag, tag_path(tag)
           = link_to tag, tag_path(tag)
-    p.musing-content
+    p.blogpost-content
       = blog.articles[0].metadata[:page]['excerpt']
-      =< link_to 'Read more…', blog.articles[0], class: 'musing-readon'
+      =< link_to 'Read more…', blog.articles[0], class: 'blogpost-readon'
+  .blogpost-fullbloglink
 
-.bloglinks
-  h2 Blogs
-  a.bloglink href='/the-wheels-spin'
-    img.bloglink-icon src='src/img/icon-blog-the-wheels-spin.svg' alt='The Wheels Spin'
-    span.bloglink-title DESIGN &amp; DEVELOP
-  a.bloglink href='/bucket-list'
-    img.bloglink-icon src='src/img/icon-blog-bucket-list.svg' alt='Bucket List'
-    span.bloglink-title EVERYTHING ELSE
+a.bloglink href="#" See The Full Blog >>

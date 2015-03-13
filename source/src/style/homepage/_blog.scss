@@ -1,78 +1,41 @@
-.musing {
+.blogpost {
   @include clearfix;
   max-width:1100px;
   padding:5rem 3%;
   margin:0 auto;
 }
 
-.musing-wrap {
+.blogpost-wrap {
   max-width:700px;
   margin:0 auto;
 }
 
-.musing-title {
+.blogpost-title {
   font-size:2.4rem;
   font-weight:900;
 }
 
-.musing-date { font-size:1.4rem; }
+.blogpost-date { font-size:1.4rem; }
 
-.musing-content {
+.blogpost-content {
   margin-top:3rem;
   line-height:2.5rem;
 }
 
-.musing-readon {
+.blogpost-readon {
   text-decoration:none;
   color:$light-charcoal;
   font-weight:800;
 }
 
-.bloglinks {
-  width:100%;
-  padding:0px;
-  @include clearfix;
-  color:white;
-  background:$charcoal;
-}
-
-.bloglinks h2 {
-  text-align:center;
-  border-bottom:2px solid $light-charcoal;
-  font-size:2.2rem;
-  font-weight:800;
-  padding:.5rem 0;
-}
-
 .bloglink {
-  display:block;
-  width:50%;
-  float:left;
-  text-align:center;
-  font-weight:800;
-  font-size:1.8rem;
-  padding:10px 0;
-  @include transition(.5s);
-
-  &:last-of-type {
-    border:2px solid $light-charcoal;
-    border-width:0 0 0 2px;
-  }
-
-  @media (max-width:575px) {
-    width:100%;
-    &:last-of-type { border-width:2px 0 0 0;}
-  }
-}
-
-.bloglink:hover { background:$light-charcoal; }
-
-.bloglink-icon{
-  height:5rem;
-  margin-right:10px;
-}
-
-.bloglink-title {
-  position:relative;
-  top:-15px;
+  display: block;
+  width: 100%;
+  background:  $charcoal;
+  color:  white;
+  text-transform:  uppercase;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.8rem;
+  padding: 10px 0;
 }
