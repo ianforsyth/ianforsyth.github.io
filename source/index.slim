@@ -4,7 +4,7 @@ header.hero
   .hero-overlay
   .hero-wrap
     h1.hero-title Ian Forsyth
-    p.hero-tagline I'm a web and mobile developer who dabbles in design and loves the outdoors.
+    p.hero-tagline I'm a software engineer who dabbles in design and craves fresh air.
     .socialmedia-links
       a.socialmedia-link target='_blank' href='http://www.strava.com/athletes/ianforsyth'
         img src='src/img/icon-social-strava.svg' alt='Ian Forsyth Strava'
@@ -53,99 +53,81 @@ header.hero
       .worksample-description
         .worksample-description-title Yale Cycling
         .worksample-description-text A new website for the Yale Cycling team, built for fans and prospective riders.
-        a.worksample-description-link href='/design-and-develop/2/yale-cycling-website' CASE STUDY
+        a.worksample-description-link href='/design-and-develop/2/yale-cycling-website' Case Study
       img.worksample-image class='sample' src='src/img/work/yale.jpg' alt='Yale Cycling'
     .worksample
       .worksample-description
         .worksample-description-title Walden Development Group
         .worksample-description-text A website built for Western New York's premier real estate developer - WDC.
-        a.worksample-description-link target='_blank' href='http://waldendevelopmentgroup.com' SEE THE SITE
+        a.worksample-description-link target='_blank' href='http://waldendevelopmentgroup.com' See The Site
       img.worksample-image class='sample' src='src/img/work/walden.jpg' alt='Walden Development Group'
     .worksample
       .worksample-description
         .worksample-description-title WRI Calculator
         .worksample-description-text An iOS app used by WRI to calculate wire size and spacing based on bar designations.
-        a.worksample-description-link href='/design-and-develop/13/wri-calculator-app' CASE STUDY
+        a.worksample-description-link href='/design-and-develop/13/wri-calculator-app' Case Study
       img.worksample-image class='sample' src='src/img/work/wri.jpg' alt='WRI Calculator App'
     .worksample#work-programming
       .worksample-description
         .worksample-description-title Programming Projects
         .worksample-description-text A collection of my pure code solutions including coding challenges and some algorithm work.
-        a.worksample-description-link href='#' COLLECTION
+        a.worksample-description-link href='#' Collection
       img.worksample-image class='sample' src='src/img/work/programming.jpg' alt='Programming Work'
     .worksample#work-illustrations
       .worksample-description
         .worksample-description-title Illustrations
         .worksample-description-text A collection of illustrations and design work that I've done for fun on the side.
-        a.worksample-description-link href='/design-and-develop/6/illustrations-collection' COLLECTION
+        a.worksample-description-link href='/design-and-develop/6/illustrations-collection' Collection
       img.worksample-image class='sample' src='src/img/work/illustrations.jpg' alt='Illustrations'
     .worksample#work-trocaire-social-media
       .worksample-description
         .worksample-description-title Trocaire Social Media
         .worksample-description-text A one stop social media hub for Buffalo's Trocaire College.
-        a.worksample-description-link href='/design-and-develop/12/trocaire-college-social-media-hub' CASE STUDY
+        a.worksample-description-link href='/design-and-develop/12/trocaire-college-social-media-hub' Case Study
       img.worksample-image class='sample' src='src/img/work/trocaire-social-media.jpg' alt='Trocaire College Social Media'
 
 
-section#about
-  h2
-    | ABOUT ME
-    span
-  img src='src/img/ian-forsyth.png' alt='Ian Forsyth'
-  p
-    | Hi, I'm Ian. I'm currently studying computer science at Yale University
-    | and just finished a few great months working as a developer at Quinlan.
-    | I love experimenting with new technologies and I'm a fast learner. When
-    | I'm not sitting in front of my computer, I'm on my bike riding back-roads,
-    | skiing, wearing flannel, going for walks, listening to good folk,
-    | or reading the occasional book.
-  p
-    | Beyond what's listed below, I also have experience with Git, SVN, Twitter Bootstrap, Google Analytics,
-    | Heroku, Memcached, WordPress, Coldfusion, Jekyll, and Anchor CMS.
-
-  #skills
-    article#skill-front-end
-      img src='src/img/icon-skill-front-end.svg' alt='Front End'
-      h3 FRONT-END
-      ul
-        li HTML 5</li
-        li CSS 3 / SASS</li
-        li jQuery</li
-
-
-    article#skill-back-end
-      img src='src/img/icon-skill-back-end.svg' alt='Front End'
-      h3 BACK-END
-      ul
-        li Objective-C
-        li PHP
-        li ASP.NET / C#
-
-
-    article#skill-databases
-      img src='src/img/icon-skill-databases.svg' alt='Front End'
-      h3 DATABASES
-      ul
-        li MySQL
-        li MSSQL
-        li PostgreSQL
-
-
-    article#skill-design
-      img src='src/img/icon-skill-design.svg' alt='Front End'
-      h3 DESIGN
-      ul
-        li Photoshop
-        li Illustrator
-        li Sketch
-
-
-    article#skill-learning
-      img src='src/img/icon-skill-learning.svg' alt='Front End'
-      h3 LEARNING
-      ul
-        li Ruby On Rails
-        li UI / UX Design
+.about
+  h2 About Me
+  img.about-profile src='src/img/ian-forsyth.png' alt='Ian Forsyth'
+  p.about-description Hi, I'm Ian, a recent Yale CS grad living in Brooklyn and working in NYC. Right now, I'm a full-time software engineer on a great team at VTS and I get to work part-time with the guys at TagitLabs. Beyond coding, I have a strong interest in product design and UI/UX. When I'm not sitting in front of my computer, I'm on my bike riding back-roads, running, skiing, wearing flannel, going for quiet walks, listening to good folk, or reading the occasional book.
+  p.about-description Beyond what's listed below, I also have experience with Git, SVN, Twitter Bootstrap, Google Analytics, Heroku, Memcached, WordPress, Middleman, Jekyll, and Anchor CMS.
+  .about-skills
+    .about-skill
+      .about-skill-wrap
+        img.about-skill-icon src='src/img/icon-skill-front-end.svg' alt='Front End'
+        h3.about-skill-title Front-End
+        p.about-skill-tech Slim / Sass
+        p.about-skill-tech AngularJS
+        p.about-skill-tech jQuery
+    .about-skill
+      .about-skill-wrap
+        img.about-skill-icon src='src/img/icon-skill-back-end.svg' alt='Front End'
+        h3.about-skill-title Back-End
+        p.about-skill-tech Ruby On Rails
+        p.about-skill-tech PHP
+        p.about-skill-tech C++
+    .about-skill
+      .about-skill-wrap
+        img.about-skill-icon src='src/img/icon-skill-databases.svg' alt='Front End'
+        h3.about-skill-title Databases
+        p.about-skill-tech MySQL
+        p.about-skill-tech PostgreSQL
+        p.about-skill-tech Redis
+    .about-skill
+      .about-skill-wrap
+        img.about-skill-icon src='src/img/icon-skill-design.svg' alt='Front End'
+        h3.about-skill-title Design
+        p.about-skill-tech UI/UX
+        p.about-skill-tech Photoshop
+        p.about-skill-tech Sketch
+    .about-skill
+      .about-skill-wrap
+        img.about-skill-icon src='src/img/icon-skill-learning.svg' alt='Front End'
+        h3.about-skill-title Learning
+        p.about-skill-tech Go
+        p.about-skill-tech Node.js
+        p.about-skill-tech MongoDB
 
 / section#inspiration
 /   .bg#saint-exupery-bg
@@ -201,21 +183,26 @@ section#about
 /   p.button &#x25BC
 
 section#musings
-  h2 From the Blog
+  h2 Latest Musing
   .post
     h4
       a href='#' = blog.articles[0].title
-    p.date = blog.articles[0].date.strftime('%b %e %Y')
+    p.date = blog.articles[0].date.strftime('%b %e, %Y')
+    .tags
+      - blog.articles[0].tags.each do |tag|
+        .tag
+          = link_to tag, tag_path(tag)
+          = link_to tag, tag_path(tag)
     p.content
       = blog.articles[0].metadata[:page]['excerpt']
       '
       = link_to 'Read more…', blog.articles[0], class: 'read-on'
 
 section#other-blogs
-    h3 OTHER BLOGS
+    h3 BLOGS
     a href='/the-wheels-spin'
       img src='src/img/icon-blog-the-wheels-spin.svg' alt='The Wheels Spin'
-      span THE WHEELS SPIN
+      span DESIGN &amp; DEVELOP
     a href='/bucket-list'
       img src='src/img/icon-blog-bucket-list.svg' alt='Bucket List'
-      span BUCKET LIST
+      span EVERYTHING ELSE

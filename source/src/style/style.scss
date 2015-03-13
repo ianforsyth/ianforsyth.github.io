@@ -1,12 +1,14 @@
 @import '_ian-forsyth-reset';
-@import '_ui-kit';
 
-@import '_navigation';
-@import '_social-media-links';
+@import 'components/_ui-kit';
+@import 'components/_tags';
+@import 'components/_navigation';
+@import 'components/_social-media-links';
 
 @import 'homepage/_hero';
 @import 'homepage/_services';
 @import 'homepage/_work';
+@import 'homepage/_about';
 
 @import '_home';
 

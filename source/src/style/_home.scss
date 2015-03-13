@@ -3,50 +3,7 @@
 
 
 
-  #about { padding:5rem 5%; background:$light-gray;
-    img { max-width:100%; clear:left; }
-    p { max-width:700px; margin:0 auto; margin-top:2.5rem; line-height:2.5rem; font-size:1.8rem; }
 
-    #skills { @include clearfix; margin:0 auto; max-width:110rem; color:$charcoal; clear:left; padding:0 5% 5rem 5%;
-      h2 { margin-bottom:0; }
-      article { float:left; width:30.3%; margin-top:5rem; margin-left:4.5%;
-        &#skill-front-end { clear:left; margin-left:0; }
-        &#skill-design { margin-left:0; clear:left; }
-        img { float:left; width:40%; }
-        h3 { float:left; font-size:2rem; margin:2rem 0 0 2%; font-weight:800; border-bottom:2px solid $charcoal; }
-        ul { float:left; margin-left:2rem; }
-        li { margin-top:1rem; font-size:1.8rem;  }
-      }
-      @media(max-width:850px) {
-        article { margin-left:3%; width:31.3%;
-          img { width:30%; }
-          h3 { margin-left:4%; display:inline-block; }
-        }
-      }
-      @media(max-width:800px) { max-width:60rem;
-        article { margin-left:3%; width:48.5%;
-          img { width:40%; }
-          h3 { margin-left:4%; display:inline-block; }
-          &#skill-design { clear:none; }
-        }
-      }
-      @media(max-width:675px) { max-width:60rem;
-        article { margin-left:3%; width:48.5%;
-          img { width:30%; }
-          h3 { margin-left:4%; display:inline-block; }
-        }
-      }
-      @media(max-width:575px) { max-width:35rem; text-align:center;
-        article { margin-left:2%; width:48.5%; float:left; text-align:center;
-          &#skill-learning, &#skill-databases { margin-left:0; }
-          &#skill-design { margin-left:2%; }
-          img { width:70%; display:inline-block; float:none; }
-          h3 { margin-left:0; clear:left; float:none;  }
-          ul { margin-left:0; clear:left; float:none; }
-        }
-      }
-    }
-  }
 
   #inspiration { padding:5rem 0 0 0; color:white;
 

@@ -91,14 +91,6 @@ header img { width:100%; display:block; }
   .wrap { padding:5% 5% 0 5%; max-width:80rem; margin:0 auto; }
   h3 { font-size:4rem; font-weight:800; }
   #post-tags { margin:1.5rem 0; }
-  .tag { display:inline-block; position:relative; overflow:hidden; margin:.5rem .3rem;
-    a { display:block; font-size:1.6rem; padding:.5rem; border-radius:3px; @include transition(.2s); }
-    a:first-of-type { background:$gray; position:relative; left:0%; }
-    a:last-of-type { background:$charcoal; color:white; position:absolute; top:0; left:100%; width:100%; }
-    &:first-of-type { margin-left:0; }
-    &:hover a:first-of-type { left:-100%; }
-    &:hover a:last-of-type { left:0px; }
-  }
   img { display:block; margin:0 auto 2.5rem auto; background:$light-gray; border:8px solid $light-gray; width:90%; }
   p, ul { font-size:1.8rem; line-height:2.5rem; margin-bottom:2.5rem; }
   p a { text-decoration:underline; }
