@@ -49,11 +49,10 @@ body.preload.home
 
   == yield
 
-  footer#footer
-    .logo
-      img#logo-gray src='/src/img/logo-ian-forsyth-gray.svg' alt='Ian Forsyth Logo Gray'
-      a href='/'
-        img#logo-color src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
+  .footer
+    a.footer-logo href='/'
+      img.footer-logo-gray src='/src/img/logo-ian-forsyth-gray.svg' alt='Ian Forsyth Logo Gray'
+      img.footer-logo-color src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
     .socialmedia-links
       a.socialmedia-link target='_blank' href='http://www.strava.com/athletes/ianforsyth'
         img src='src/img/icon-social-strava-gray.svg' alt='Ian Forsyth Strava'
@@ -71,15 +70,14 @@ body.preload.home
         img src='src/img/icon-social-dribbble-gray.svg' alt='Ian Forsyth Dribbble'
         img src='src/img/icon-social-dribbble-color.svg' alt='Ian Forsyth Dribbble'
 
-    #subscribe
-      p#subscribe-button SUBSCRIBE
-      input#subscribe-text type='email' name='email' placeholder='Email' value=''
-      p#subscribe-submit Submit
+    .subscribe
+      p.subscribe-button Subscribe
+      input.subscribe-text type='email' name='email' placeholder='Email' value=''
+      p.subscribe-submit Submit
 
-    #copyright
-      p Ian Forsyth 2013
+  p.copyright &copy; Ian Forsyth 2015
 
   script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'
   / For offline working
-  = javascript_include_tag 'jquery-1.11.2.min'
+  / = javascript_include_tag 'jquery-1.11.2.min'
   = javascript_include_tag 'script'

@@ -1,14 +1,14 @@
 openSubscribe = ->
-  $('#subscribe-button').parent().addClass 'active'
-  $('#subscribe-button').text 'X'
+  $('.subscribe-button').parent().addClass 'active'
+  $('.subscribe-button').text 'X'
   return
 
 closeSubscribe = (text) ->
-  $('#subscribe-button').delay(1000).queue (n) ->
+  $('.subscribe-button').delay(1000).queue (n) ->
     $(@).text text
     n()
     return
-  $('#subscribe').removeClass 'active'
+  $('.subscribe').removeClass 'active'
   return
 
 displayWittyMessage = (counter) ->
@@ -24,17 +24,14 @@ displayWittyMessage = (counter) ->
 
 $(window).on 'load', ->
   $('body').removeClass 'preload'
-  return
 
 $(window).resize ->
-  $('#quote-wrap').css 'height': $('#quote-wrap .showing').height() + 'px'
-  return
+  $('.inspiration-quotes').css { 'height': "#{$('.inspiration-quote.active').height()}px" }, quoteSpeed
 
 # Header parallax scrolling
 $(window).scroll ->
   yPos = +($(window).scrollTop() / 2)
   $('header').css 'top': yPos
-  return
 
 $ ->
   # Navigation animation
@@ -56,24 +53,24 @@ $ ->
         $('navmenu').removeClass 'open'
 
   # Footer subscribe button animation and submition
-  $('#subscribe-button').click ->
-    if !$('#subscribe').hasClass('active')
+  $('.subscribe-button').click ->
+    if !$('.subscribe').hasClass('active')
       openSubscribe()
     else
-      closeSubscribe 'SUBSCRIBE'
+      closeSubscribe 'Subscribe'
 
   # Subscribe with submit button pressed
-  $('#subscribe-submit').click ->
-    if $('#subscribe').hasClass('active')
-      $.post '/email', email: $('#subscribe-text').val()
+  $('.subscribe-submit').click ->
+    if $('.subscribe').hasClass('active')
+      $.post '/email', email: $('.subscribe-text').val()
       closeSubscribe 'THANK YOU!'
 
   # Subscribe with enter key pressed
-  $('#subscribe-text').keyup (event) ->
+  $('.subscribe-text').keyup (event) ->
     keycode = event.keyCode or event.which
     if keycode == 13
-      if $('#subscribe').hasClass('active')
-        $.post '/email', email: $('#subscribe-text').val()
+      if $('.subscribe').hasClass('active')
+        $.post '/email', email: $('.subscribe-text').val()
         closeSubscribe 'THANK YOU!'
 
   # Blog search bar
