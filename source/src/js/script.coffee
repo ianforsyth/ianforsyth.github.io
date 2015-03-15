@@ -47,7 +47,6 @@ $ ->
       $('.navbar-menubutton').removeClass 'open'
       $('.navmenu').removeClass 'open'
       $('body').scrollTop scroll_position
-    return
 
   # Close navigation if selection doesn't leave page.
   $('nav a').click ->
@@ -55,7 +54,6 @@ $ ->
       if $(@).parent().is('.menu')
         $('#mobile-nav').removeClass 'open'
         $('navmenu').removeClass 'open'
-    return
 
   # Footer subscribe button animation and submition
   $('#subscribe-button').click ->
@@ -63,14 +61,12 @@ $ ->
       openSubscribe()
     else
       closeSubscribe 'SUBSCRIBE'
-    return
 
   # Subscribe with submit button pressed
   $('#subscribe-submit').click ->
     if $('#subscribe').hasClass('active')
       $.post '/email', email: $('#subscribe-text').val()
       closeSubscribe 'THANK YOU!'
-    return
 
   # Subscribe with enter key pressed
   $('#subscribe-text').keyup (event) ->
@@ -79,14 +75,12 @@ $ ->
       if $('#subscribe').hasClass('active')
         $.post '/email', email: $('#subscribe-text').val()
         closeSubscribe 'THANK YOU!'
-    return
 
   # Blog search bar
   $('#option-search input').keyup (event) ->
     keycode = event.keyCode or event.which
     if keycode == 13
       displayWittyMessage 0
-    return
 
   # Services controller
   $('.next').click ->
@@ -115,29 +109,21 @@ $ ->
     next_slide.addClass('active')
 
   # Handle quote switching and size changing
-  $('#quote-wrap').css 'height': $('.showing').height() + 'px'
-  $('#inspiration .button').click ->
-    $now = $('.showing')
-    $next = if $now.next('article').length then $now.next('article') else $('#inspiration article:first')
-    $('#inspiration #' + $next.attr('id') + '-bg').css
-      'z-index': '9'
-      'opacity': '1'
-    $('#inspiration #' + $now.attr('id') + '-bg').animate { 'opacity': '0' }, ->
-      $('#inspiration #' + $now.attr('id') + '-bg').css 'z-index', '1'
-      $('#inspiration #' + $next.attr('id') + '-bg').css 'z-index', '10'
-      return
-    $now.addClass 'fade'
-    $next.delay(350).queue (n) ->
-      $(@).addClass 'slide'
-      n()
-      return
-    $('#quote-wrap').animate { 'height': $next.height() + 'px' }, 350, ->
-    window.setTimeout (->
-      $now.removeClass()
-      $next.removeClass().addClass 'showing'
-      return
-    ), 700
-    return
+  quoteIndex = 0
+  quoteSpeed = 500
+  $('.inspiration-button').click ->
+    quoteIndex = if quoteIndex == 5 then 0 else quoteIndex + 1
+
+    currentBg = $(".inspiration-bg.active")
+    nextBg = $(".inspiration-bg[data-index='#{quoteIndex}']")
+    currentBg.fadeOut quoteSpeed, (-> currentBg.removeClass('active'))
+    nextBg.fadeIn quoteSpeed, (-> nextBg.addClass('active'))
+
+    currentQuote = $('.inspiration-quote.active')
+    nextQuote = $(".inspiration-quote[data-index='#{quoteIndex}']")
+    currentQuote.fadeOut quoteSpeed, (-> currentQuote.removeClass('active'))
+    nextQuote.fadeIn quoteSpeed, (-> nextQuote.addClass('active'))
+    $('.inspiration-quotes').animate { 'height': nextQuote.height() + 'px' }, quoteSpeed
 
   # Blog options
   $('#option-buttons a').click ->

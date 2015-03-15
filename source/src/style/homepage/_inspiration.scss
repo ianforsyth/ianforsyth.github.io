@@ -1,0 +1,77 @@
+.inspiration {
+  padding-top: 50px;
+  color: white;
+  position: relative;
+
+  @media(max-width: 500px) { display: none; }
+}
+
+.inspiration-bg {
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+
+  &.active { display: block; }
+  &.saint-exupery { background-image: url(../img/inspiration/saint-exupery.jpg); }
+  &.davinci { background-image: url(../img/inspiration/da-vinci.jpg); }
+  &.kidd { background-image: url(../img/inspiration/kidd.jpg); }
+  &.lemond { background-image: url(../img/inspiration/lemond.jpg); }
+  &.glaser { background-image: url(../img/inspiration/glaser.jpg); }
+  &.jobs { background-image: url(../img/inspiration/jobs.jpg); }
+}
+
+.inspiration-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: $charcoal;
+  opacity: .8;
+}
+
+.inspiration-wrap {
+  position: relative;
+}
+
+.inspiration-quotes {
+  margin-top: 20px;
+  position: relative;
+  height: 107px;
+}
+
+.inspiration-quote {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  &.active { display: block; }
+}
+
+.inspiration-quote-text {
+  font-size: 20px;
+  text-align: center;
+  padding: 0 $outside-padding;
+  font-weight: 500;
+}
+
+.inspiration-quote-author {
+  text-align: right;
+  padding-right: 100px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.inspiration-button {
+  background: $charcoal;
+  text-align: center;
+  padding: 5px 0;
+  cursor: pointer;
+  margin-top: 40px;
+}

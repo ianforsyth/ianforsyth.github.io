@@ -129,58 +129,36 @@ header.hero
         p.about-skill-tech Node.js
         p.about-skill-tech MongoDB
 
-/ section#inspiration
-/   .bg#saint-exupery-bg
-/     .overlay
-/   .bg#da-vinci-bg
-/     .overlay
-/   .bg#kidd-bg
-/     .overlay
-/   .bg#lemond-bg
-/     .overlay
-/   .bg#glaser-bg
-/     .overlay
-/   .bg#jobs-bg
-/     .overlay
-
-/   h2
-/     | INSPIRATION
-/     span
-
-/   #quote-wrap
-/     #saint-exupery.showing
-/       p.quote
-/         | Perfection is achieved, not when there is nothing more to add,
-/         | but when there is nothing left to take away.
-/       p.author - Antoine de Saint-Exupery
-
-/     #da-vinci
-/       p.quote
-/         | Websites are never finished, only abandoned.
-/       p.author - Leonardo da Vinci (sort of)
-
-/     #kidd
-/       p.quote
-/         | The best solution can usually be found in the best definition
-/         | of the problem itself.
-/       p.author - Chip Kidd
-
-/     #lemond
-/       p.quote
-/         | It never gets easier, you just go faster.
-/       p.author - Greg LeMond
-
-/     #glaser
-/       p.quote
-/         | Style is not to be trusted.
-/       p.author - Milton Glaser
-
-/     #jobs
-/       p.quote
-/         | It's not just what it looks and feels like. Design is how it works.
-/       p.author - Steve Jobs
-
-/   p.button &#x25BC
+.inspiration
+  .inspiration-bg.saint-exupery.active data-index='0'
+  .inspiration-bg.davinci data-index='1'
+  .inspiration-bg.kidd data-index='2'
+  .inspiration-bg.lemond data-index='3'
+  .inspiration-bg.glaser data-index='4'
+  .inspiration-bg.jobs data-index='5'
+  .inspiration-overlay
+  .inspiration-wrap
+    h2 INSPIRATION
+    .inspiration-quotes
+      .inspiration-quote.active data-index='0'
+        p.inspiration-quote-text Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+        p.inspiration-quote-author - Antoine de Saint-Exupery
+      .inspiration-quote data-index='1'
+        p.inspiration-quote-text Websites are never finished, only abandoned.
+        p.inspiration-quote-author - Leonardo da Vinci (sort of)
+      .inspiration-quote data-index='2'
+        p.inspiration-quote-text The best solution can usually be found in the best definition of the problem itself.
+        p.inspiration-quote-author - Chip Kidd
+      .inspiration-quote data-index='3'
+        p.inspiration-quote-text It never gets easier, you just go faster.
+        p.inspiration-quote-author - Greg LeMond
+      .inspiration-quote data-index='4'
+        p.inspiration-quote-text Style is not to be trusted.
+        p.inspiration-quote-author - Milton Glaser
+      .inspiration-quote data-index='5'
+        p.inspiration-quote-text It's not just what it looks and feels like. Design is how it works.
+        p.inspiration-quote-author - Steve Jobs
+    p.inspiration-button &#x25BC
 
 .blogpost
   h2 Latest Post
