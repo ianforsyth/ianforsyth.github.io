@@ -25,11 +25,11 @@ pageable: true
           '
           = link_to 'Read more…', article, class: 'read-on'
 
-#pagination
+.pagination
   - if num_pages > 1
     - if page_number > 1
-      = link_to '< PREV', prev_page, id: 'previous'
+      = link_to '< PREV', prev_page, class: 'pagination-previous'
     - (1..num_pages).each do |num|
-      = link_to num, "/blog/page/#{num}", class: "#{'active' if num == page_number}"
+      = link_to num, "/blog/page/#{num}", class: "#{'active' if num == page_number} pagination-pagenumber"
     - if page_number != num_pages
-      = link_to 'NEXT >', next_page, id: 'next'
+      = link_to 'NEXT >', next_page, class: 'pagination-next'

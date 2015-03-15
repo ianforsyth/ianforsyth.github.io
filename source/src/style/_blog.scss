@@ -118,13 +118,6 @@ header img { width:100%; display:block; }
       @media(max-width:500px) { a { width:33.33%; } a:first-of-type { display:none; } }
     }
   }
-  #pagination { background:$charcoal; color:white; font-size:2rem; font-weight:800; @include clearfix; text-align:center; position:relative;
-    a { line-height:6rem; padding:0 2px; }
-    a.active { color:lighten($charcoal, 20%); }
-    a#previous { padding:0 3%; border-right:2px solid $light-charcoal; position:absolute; left:0; top:0; }
-    a#next { padding:0 3%; border-left:2px solid $light-charcoal; position:absolute; right:0; top:0; }
-    @media(max-width:425px) { a#previous, a#next { display:none; } }
-  }
 }
 
 #svg-logos { text-align:center; }
