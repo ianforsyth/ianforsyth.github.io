@@ -7,17 +7,18 @@
 
     - if current_article
       == partial 'blog-post-options'
-      h3 = current_article.title
-      h4
-        | By Ian Forsyth on
-        = current_article.date.strftime('%b %e,  %Y')
-      #post-tags
-        - current_article.tags.each do |tag|
-          .tag
-            = link_to tag, tag_path(tag)
-            = link_to tag, tag_path(tag)
-      #post
-        == yield
+      .post
+        h3.post-title = current_article.title
+        h4.post-authordate
+          | By Ian Forsyth on
+          = current_article.date.strftime('%b %e,  %Y')
+        .post-tags
+          - current_article.tags.each do |tag|
+            .tag
+              = link_to tag, tag_path(tag)
+              = link_to tag, tag_path(tag)
+          == yield
+        #disqus_thread
     - else
       == partial  'blog-list-options'
       == yield

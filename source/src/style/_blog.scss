@@ -10,39 +10,6 @@ header img { width:100%; display:block; }
   }
 }
 
-#post { position:relative; z-index:5; background:white;
-  .wrap { padding:5% 5% 0 5%; max-width:80rem; margin:0 auto; }
-  h3 { font-size:4rem; font-weight:800; }
-  #post-tags { margin:1.5rem 0; }
-  img { display:block; margin:0 auto 2.5rem auto; background:$light-gray; border:8px solid $light-gray; width:90%; }
-  p, ul { font-size:1.8rem; line-height:2.5rem; margin-bottom:2.5rem; }
-  p a { text-decoration:underline; }
-  a.button { background:$charcoal; color:white; font-size:1.8rem; font-weight:900; padding:.8rem 1rem; text-align:center; border-radius:.3rem; width:80%; margin:0 auto 2.5rem auto; display:block; @include transition(.35s); }
-  a.button:hover { background:$light-charcoal; }
-  p.caption { background:$light-gray; margin:-2.5rem auto 2.5rem auto; max-width:90%; text-align:left; padding:.5rem 5% 1rem 5%; font-size:1.4rem; line-height:2rem; }
-  p.block-quote { background:$light-gray; padding:4rem; position:relative; width:90%; margin:0 auto 2.5rem auto;
-    @media (max-width:550px) { width:100%; }
-    &:before { content:url('/src/img/quote-open.svg'); position:absolute; left:10px; top:10px; }
-    &:after { content:url('/src/img/quote-close.svg'); position:absolute; right:10px; bottom:10px; }
-    span { font-size:12px; display:block; width:100%; text-align:right; }
-  }
-  iframe { margin:0 auto 2.5rem auto; display:block }
-  pre { max-height:400px; margin-bottom:30px; font-size:1.2rem; }
-}
-
-#disqus_thread { max-width:80rem; padding:5%; margin:0 auto; }
-
-.blog {
-  #option-buttons {
-    a { width:33.33%; }
-    @media(max-width:500px) { a span { display:none; } }
-    &.post {
-      a { width:25%; }
-      @media(max-width:500px) { a { width:33.33%; } a:first-of-type { display:none; } }
-    }
-  }
-}
-
 #svg-logos { text-align:center; }
 #svg-logos img:first-child { margin-right:5%!important; }
 #svg-logos img { width:40%!important; display:inline-block!important; vertical-align:bottom; border:none!important; background:none!important; }
