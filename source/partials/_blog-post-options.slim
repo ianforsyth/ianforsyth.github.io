@@ -1,27 +1,24 @@
-#option-buttons.post
-  a.back href='/blog' &lt; BACK
-  a.share SHARE
-  a.tags TAGS
-  a.search SEARCH
+.blogaction-buttons
+  a.blogaction-button.blogaction-button-back.post href='/blog' &lt;&lt; Back
+  a.blogaction-button.post data-blogaction='share' Share
+  a.blogaction-button.post data-blogaction='tags' Tags
+  a.blogaction-button.post data-blogaction='search' Search
 
-#options
-  #option-about
-    img src="/src/img/ian-forsyth.jpg"
-    p
-      | I'm Ian Forsyth, a web and mobile developer from Buffalo, NY. I appreciate good design and love riding bikes. I'm currently a student at Yale University, just finished as a developer at Quinlan, and available for freelance work. Feel free to
-      a< href="mailto:ian@ianforsyth.com" get in touch
-      | .
+.blogactions
+  .blogaction.blogaction-about
+    img.blogaction-about-photo src="/src/img/ian-forsyth.jpg"
+    p.blogaction-about-text I'm Ian Forsyth, a web and mobile developer from Buffalo, NY. I appreciate good design and love riding bikes. I'm currently a student at Yale University, just finished as a developer at Quinlan, and available for freelance work. Feel free to <a href="mailto:ian@ianforsyth.com">get in touch</a>.
 
-  #option-tags
+  .blogaction.blogaction-share
+    a.blogaction-share-facebook target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo 'http://ianforsyth.com/' . $post['blog'] . '/' . $post['post_id'] . '/' . $post['slug']; ?>&p[images][0]=http://ianforsyth.com/src/img/logo-ian-forsyth.png&p[title]=<?php echo $post['title']; ?>&p[summary]=<?php echo htmlentities($post['excerpt']); ?>" FACEBOOK
+    a.blogaction-share-twitter target="_blank" href="http://twitter.com/home?status=<?php echo $post['title']; ?> by @iforsyth91 - <?php echo 'http://ianforsyth.com/' . $post['blog_slug'] . '/' . $post['post_id'] . '/' . $post['slug']; ?>" TWITTER
+    a.blogaction-share-google target="_blank" href="https://plus.google.com/share?url=<?php echo 'http://ianforsyth.com/' . $post['blog'] . '/' . $post['post_id'] . '/' . $post['slug']; ?>" GOOGLE+
+
+  .blogaction.blogaction-tags
     - blog.tags.each do |tag, articles|
       .tag
         = link_to tag, tag_path(tag)
         = link_to tag, tag_path(tag)
 
-  #option-share
-    a#share-facebook target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo 'http://ianforsyth.com/' . $post['blog'] . '/' . $post['post_id'] . '/' . $post['slug']; ?>&p[images][0]=http://ianforsyth.com/src/img/logo-ian-forsyth.png&p[title]=<?php echo $post['title']; ?>&p[summary]=<?php echo htmlentities($post['excerpt']); ?>" FACEBOOK
-    a#share-twitter target="_blank" href="http://twitter.com/home?status=<?php echo $post['title']; ?> by @iforsyth91 - <?php echo 'http://ianforsyth.com/' . $post['blog_slug'] . '/' . $post['post_id'] . '/' . $post['slug']; ?>" TWITTER
-    a#share-google target="_blank" href="https://plus.google.com/share?url=<?php echo 'http://ianforsyth.com/' . $post['blog'] . '/' . $post['post_id'] . '/' . $post['slug']; ?>" GOOGLE+
-
-  #option-search
-    input name="search" placeholder="Watcha looking for?"
+  .blogaction.blogaction-search
+    input.blogaction-search-textbox name="search" placeholder="Watcha looking for?"

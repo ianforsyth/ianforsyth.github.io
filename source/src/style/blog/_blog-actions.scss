@@ -1,0 +1,114 @@
+$blogaction-about-bp: 675px;
+
+.blogaction-buttons {
+  @include clearfix;
+  width: 100%;
+  border-top:2px solid $light-charcoal;
+}
+
+.blogaction-button {
+  float:left;
+  text-align:center;
+  text-transform: uppercase;
+  font-weight:800;
+  font-size: 20px;
+  padding: 20px;
+  background:$charcoal;
+  color:white;
+  cursor:pointer;
+  display: inline-block;
+
+  &.list { width: 33.33%; }
+  &.post { width: 25%; }
+
+  &:hover { background:$light-charcoal; }
+
+  @media(max-width: 500px) {
+    span { display: none; }
+    &.post { width: 33.33%; }
+    &.blogaction-button-back { display: none; }
+  }
+}
+
+.blogactions {
+  background:white;
+  position:relative;
+}
+
+.blogaction {
+  display: none;
+}
+
+.blogaction-about {
+  @include clearfix;
+  padding: 30px 5%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  background: white;
+  @media(max-width: $blogaction-about-bp) { padding:2rem 5%; }
+}
+
+.blogaction-about-photo {
+  width: 200px;
+  float: left;
+  margin-right: 5%;
+  @media(max-width: $blogaction-about-bp) { display: none; }
+}
+
+.blogaction-about-text {
+  font-size: 18px;
+  padding-top: 28px;
+  line-height: 24px;
+
+  a { text-decoration: underline; }
+}
+
+.blogaction-tags {
+  padding:2rem 5%;
+  text-align:center;
+
+  .tag a { font-size: 20px; }
+}
+
+.blogaction-search {
+  padding: 15px 5%;
+}
+
+.blogaction-search-textbox {
+  font-size: 30px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-family: "Lato";
+  font-weight: 300;
+
+  @media(max-width:500px) {
+    font-size: 20px;
+    line-height: 20px;
+    height: 40px;
+  }
+}
+
+.blogaction-share {
+  @include clearfix;
+}
+
+.blogaction-share-facebook,
+.blogaction-share-twitter,
+.blogaction-share-google {
+  display: block;
+  text-transform: uppercase;
+  width: 33.33%;
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  @include transition(.5s);
+}
+
+.blogaction-share-facebook { background:darken(#3b5998, 10%); &:hover { background:#3b5998; } }
+.blogaction-share-twitter { background:darken(#55acee, 10%); &:hover { background:#55acee; } }
+.blogaction-share-google { background:darken(#dd4b39, 10%); &:hover { background:#dd4b39; } }

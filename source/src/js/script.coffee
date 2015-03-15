@@ -14,13 +14,12 @@ closeSubscribe = (text) ->
 displayWittyMessage = (counter) ->
   witty_message = 'No search yet...Sorry. Coming soon.'
   counter += 1
-  $('#option-search input').val witty_message.substring(0, counter)
+  $('.blogaction-search-textbox').val witty_message.substring(0, counter)
   if counter < 35
     setTimeout (->
       displayWittyMessage counter
       return
     ), 42
-  return
 
 $(window).on 'load', ->
   $('body').removeClass 'preload'
@@ -74,7 +73,7 @@ $ ->
         closeSubscribe 'THANK YOU!'
 
   # Blog search bar
-  $('#option-search input').keyup (event) ->
+  $('.blogaction-search-textbox').keyup (event) ->
     keycode = event.keyCode or event.which
     if keycode == 13
       displayWittyMessage 0
@@ -123,19 +122,15 @@ $ ->
     $('.inspiration-quotes').animate { 'height': nextQuote.height() + 'px' }, quoteSpeed
 
   # Blog options
-  $('#option-buttons a').click ->
-    if $(@).attr('class') == 'back'
-      return
-    if $(@).hasClass('active')
-      $(@).removeClass 'active'
-      $('#option-' + $(@).attr('class')).slideUp()
+  $('.blogaction-button').click ->
+    blogActionToShow = $(".blogaction-#{$(@).data('blogaction')}")
+    if blogActionToShow.hasClass('active')
+      blogActionToShow.slideUp()
+      blogActionToShow.removeClass('active')
     else
-      $clicked = $('#option-buttons a.active')
-      $clicked.removeClass 'active'
-      $('#option-' + $clicked.attr('class')).slideUp()
-      $('#option-' + $(@).attr('class')).slideDown()
-      $(@).addClass 'active'
-    return
+      $('.blogaction.active').slideUp()
+      $('.blogaction.active').removeClass('active')
+      blogActionToShow.slideDown().addClass('active')
 
   # Disqus Comments
   if $('#disqus_thread').length > 0
