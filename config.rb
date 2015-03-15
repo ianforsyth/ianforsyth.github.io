@@ -13,7 +13,6 @@ require 'slim'
 #   page "/admin/*"
 # end
 
-
 activate :blog do |blog|
   blog.prefix = 'blog'
   blog.permalink = ':title.html'
@@ -21,7 +20,7 @@ activate :blog do |blog|
   blog.default_extension = '.slim'
 
   blog.paginate = true
-  blog.per_page = 2
+  blog.per_page = 5
 
   blog.tag_template = 'blog/tag.html'
   blog.taglink = ':tag/index.html'

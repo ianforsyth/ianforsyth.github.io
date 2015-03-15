@@ -10,42 +10,6 @@ header img { width:100%; display:block; }
   }
 }
 
-#posts {
-  article { position:relative; text-align:center; background:white;}
-  article:nth-of-type(even) { background:#f0f0f0; }
-  .content { max-width:75rem; display:inline-block; position:relative; padding:4rem 0rem 4rem 9rem;
-    & > * { text-align:left; }
-    h3 { font-size:4rem; font-weight:800; line-height:4rem; }
-    h3:hover { color:$light-charcoal; }
-    h4 span { display:none; }
-    p { font-size:1.8rem; line-height:2.4rem; }
-    p a { text-decoration:underline; }
-    #tags { margin:1.5rem 0 1rem 0; }
-    .tag { display:inline-block; position:relative; overflow:hidden; margin:.5rem .3rem;
-      a { display:block; font-size:1.6rem; padding:.5rem; border-radius:3px; @include transition(.2s); }
-      a:first-of-type { background:$gray; position:relative; left:0%; }
-      a:last-of-type { background:$charcoal; color:white; position:absolute; top:0; left:100%; width:100%; }
-      &:first-of-type { margin-left:0; }
-      &:hover a:first-of-type { left:-100%; }
-      &:hover a:last-of-type { left:0px; }
-    }
-  }
-  .date { position:absolute; left:2rem; top:4.5rem;
-    .day { font-size:4rem; font-weight:200; }
-    .month { position:absolute; left:-2.5rem; top:.2rem; -webkit-transform:rotate(-90deg); }
-  }
-  @media(max-width:800px) {
-    .content { padding:4rem 5%; }
-    .date { display:none; }
-    h4 span { display:inline!important; }
-  }
-  @media(max-width:450px) {
-    article { text-align:left; }
-    .content h3 { font-size:2.6rem; line-height:3rem; }
-    .content p { display:none; }
-  }
-}
-
 #post { position:relative; z-index:5; background:white;
   .wrap { padding:5% 5% 0 5%; max-width:80rem; margin:0 auto; }
   h3 { font-size:4rem; font-weight:800; }

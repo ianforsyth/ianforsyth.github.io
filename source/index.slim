@@ -160,19 +160,19 @@ header.hero
         p.inspiration-quote-author - Steve Jobs
     p.inspiration-button &#x25BC
 
-.blogpost
+.home-blogpost
   h2 Latest Post
-  .blogpost-wrap
-    a.blogpost-title href='#' = blog.articles[0].title
-    p.blogpost-date = blog.articles[0].date.strftime('%b %e, %Y')
-    .blogpost-tags
+  .home-blogpost-wrap
+    a.home-blogpost-title href='#' = blog.articles[0].title
+    p.home-blogpost-date = blog.articles[0].date.strftime('%b %e, %Y')
+    .home-blogpost-tags
       - blog.articles[0].tags.each do |tag|
         .tag
           = link_to tag, tag_path(tag)
           = link_to tag, tag_path(tag)
-    p.blogpost-content
+    p.home-blogpost-content
       = blog.articles[0].metadata[:page]['excerpt']
-      =< link_to 'Read more…', blog.articles[0], class: 'blogpost-readon'
-  .blogpost-fullbloglink
+      =< link_to 'Read more…', blog.articles[0], class: 'home-blogpost-readon'
+  .home-blogpost-fullbloglink
 
-a.bloglink href="#" See The Full Blog >>
+a.home-bloglink href="#" See The Full Blog >>

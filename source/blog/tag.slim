@@ -2,28 +2,27 @@
 pageable: true
 ---
 
-#posts
+.blogposts
   - page_articles.each do |article|
-    article.clearfix
-      .content
-        .date
-          .month = article.date.strftime('%b')
-          .day = article.date.strftime('%d')
-          .year = article.date.year
-        h3
-          = link_to article.title, article
-        h4
-          ' By Ian Forsyth on
-          = article.date.strftime('%b %e,  %Y')
-        #tags
+    article.blogpost
+      .blogpost-wrap
+        .blogpost-date
+          .blogpost-date-month = article.date.strftime('%b')
+          .blogpost-date-day = article.date.strftime('%d')
+          .blogpost-date-year = article.date.year
+        h3.blogpost-title = link_to article.title, article
+        h4.blogpost-author
+          | By Ian Forsyth
+          span< on
+          span< = article.date.strftime('%b %e,  %Y')
+        .blogpost-tags
           - article.tags.each do |tag|
             .tag
               = link_to tag, tag_path(tag)
               = link_to tag, tag_path(tag)
-        p
+        p.blogpost-excerpt
           = article.metadata[:page]['excerpt']
-          '
-          = link_to 'Read more…', article, class: 'read-on'
+          =< link_to 'Read more…', article, class: 'read-on'
 
 .pagination
   - if num_pages > 1
