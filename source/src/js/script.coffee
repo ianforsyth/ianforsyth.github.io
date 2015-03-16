@@ -3,6 +3,10 @@ openSubscribe = ->
   $('.subscribe-button').text 'X'
   return
 
+sendSubscription = (email) ->
+  $.post '//formspree.io/ian@ianforsyth.com',
+    email: email
+
 closeSubscribe = (text) ->
   $('.subscribe-button').delay(1000).queue (n) ->
     $(@).text text
@@ -61,7 +65,7 @@ $ ->
   # Subscribe with submit button pressed
   $('.subscribe-submit').click ->
     if $('.subscribe').hasClass('active')
-      $.post '/email', email: $('.subscribe-text').val()
+      sendSubscription $('.subscribe-text').val()
       closeSubscribe 'THANK YOU!'
 
   # Subscribe with enter key pressed
@@ -69,7 +73,7 @@ $ ->
     keycode = event.keyCode or event.which
     if keycode == 13
       if $('.subscribe').hasClass('active')
-        $.post '/email', email: $('.subscribe-text').val()
+        sendSubscription $('.subscribe-text').val()
         closeSubscribe 'THANK YOU!'
 
   # Blog search bar
