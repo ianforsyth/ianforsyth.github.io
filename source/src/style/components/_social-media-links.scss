@@ -1,9 +1,9 @@
 .socialmedia-link {
+  @include transition(.5s);
   position: relative;
   display: inline-block;
   font-size: 40px;
   margin: 5px;
-  @include transition(.5s);
 
   &.icon-strava:hover { color: $strava-color; }
   &.icon-twitter:hover { color: $twitter-color; }
