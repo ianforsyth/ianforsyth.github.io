@@ -18,14 +18,14 @@ $blogaction-about-bp: 675px;
   cursor:pointer;
   display: inline-block;
 
-  &.list { width: 33.33%; }
-  &.post { width: 25%; }
+  &.blogaction-button-list { width: 33.33%; }
+  &.blogaction-button-post { width: 25%; }
 
   &:hover { background:$light-charcoal; }
 
   @media(max-width: 500px) {
     span { display: none; }
-    &.post { width: 33.33%; }
+    &.blogaction-button-post { width: 33.33%; }
     &.blogaction-button-back { display: none; }
   }
 }

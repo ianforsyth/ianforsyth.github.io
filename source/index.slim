@@ -148,7 +148,7 @@ header.hero
 .home-blogpost
   h2 Latest Post
   .home-blogpost-wrap
-    a.home-blogpost-title href='#' = blog.articles[0].title
+    a.home-blogpost-title href='#' = link_to blog.articles[0].title, blog.articles[0]
     p.home-blogpost-date = blog.articles[0].date.strftime('%b %e, %Y')
     .home-blogpost-tags
       - blog.articles[0].tags.each do |tag|

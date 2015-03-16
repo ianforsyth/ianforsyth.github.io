@@ -6,7 +6,7 @@
       p Blog description goes here.
 
     - if current_article
-      == partial 'blog-post-options'
+      == partial 'blog-post-actions'
       .post
         h3.post-title = current_article.title
         h4.post-authordate
@@ -20,7 +20,7 @@
           == yield
         #disqus_thread
     - else
-      == partial  'blog-list-options'
+      == partial  'blog-list-actions'
       == yield
 
 
