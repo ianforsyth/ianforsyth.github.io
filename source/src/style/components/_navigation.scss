@@ -11,18 +11,25 @@
 .navbar-homelink {
   margin: 10px 0 0 $outside-padding;
   float: left;
+
+  &:before {
+    font-size: 25px;
+    float: left;
+    position: relative;
+    top: -4px;
+    margin-right: 5px;
+  }
 }
 
 .navbar-contactlink {
   display: block;
   float: right;
+  color: white;
+  font-size: 30px;
   background: #3E6F82;
   width: $navbar-height;
   height: $navbar-height;
-  padding: 8px 0 0 4px;
-
-  img { width: 30px;
-  }
+  padding: 4px 0 0 4px;
 }
 
 .navbar-menubutton {
