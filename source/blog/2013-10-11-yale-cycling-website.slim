@@ -22,9 +22,9 @@ p
   a href="http://collegiatecycling.org/eccc/wiki/" ECCC
   | ) and Ivy League logos. They scale beautifully with the responsive layout and look crisp on retina equipped iPhones.
 
-#svg-logos
-  img src="/src/img/blog-img/eccc-logo.svg" alt="Eastern Collegiate Cycling Conference Logo"
-  img src="/src/img/blog-img/ivy-logo.svg" alt="Ivy League Logo"
+.yale-cycling-logos
+  img.yale-cycling-logo src="/src/img/blog-img/eccc-logo.svg" alt="Eastern Collegiate Cycling Conference Logo"
+  img.yale-cycling-logo src="/src/img/blog-img/ivy-logo.svg" alt="Ivy League Logo"
 
 
 p But normal .png and .jpg images have their place in every site, so I turned to retina.js. It's a fantastic tool and although I see it becoming obsolete in the future with the development of new image standards and types, it's perfect for the time at hand. If you've ever done iOS development, you know the naming convention for retina scale images is to append @2x to the end of the filename. Same principle applies for retina.js. The 3kb min version of the script checks through your images after page load and replaces them with the available high resolution versions. It's a no brainer to implement and the little bit of extra work to save out the @2x images is worth it when retina screen users are looking at crisp photos.
