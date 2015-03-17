@@ -7,21 +7,14 @@
 }
 
 .footer-logo {
-  position:relative;
-  display:inline-block;
-}
+  font-size: 120px;
+  height: 80px;
+  display: block;
 
-.footer-logo:hover .footer-logo-color {
-  opacity:1;
-  @include transition(1s)
-}
-
-.footer-logo-color {
-  position:absolute;
-  top:0;
-  left:0;
-  opacity:0;
-  @include transition(8s);
+  &:before {
+    position: relative;
+    top: -25px;
+  }
 }
 
 .subscribe-button,

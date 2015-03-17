@@ -31,8 +31,7 @@ body.preload.home
 
   .navmenu
     .navmenu-wrap
-      a.navmenu-logo href='/'
-        img src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
+      a.navmenu-logo.icon-logo href='/'
       h1.navmenu-homelink
         a href='/' Ian Forsyth
       .navmenu-sitelinks
@@ -45,9 +44,7 @@ body.preload.home
   == yield
 
   .footer
-    a.footer-logo href='/'
-      img.footer-logo-gray src='/src/img/logo-ian-forsyth-gray.svg' alt='Ian Forsyth Logo Gray'
-      img.footer-logo-color src='/src/img/logo-ian-forsyth.svg' alt='Ian Forsyth Logo'
+    a.footer-logo.icon-logo href='/'
     == partial 'social-media-icons'
 
     .subscribe

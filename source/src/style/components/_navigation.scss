@@ -91,6 +91,17 @@
   margin: 0 auto;
 }
 
+.navmenu-logo {
+  display: block;
+  font-size: 120px;
+  height: 80px;
+
+  &:before {
+    position: relative;
+    top: -25px;
+  }
+}
+
 .navmenu-homelink {
   margin-top: 10px;
 }
