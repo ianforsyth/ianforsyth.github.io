@@ -1,9 +1,13 @@
 .inspiration {
-  padding-top: 50px;
+  padding-top: $vertical-padding;
   color: white;
   position: relative;
 
   @media(max-width: 500px) { display: none; }
+}
+
+.inspiration-title:after {
+  background: white;
 }
 
 .inspiration-bg {
@@ -41,9 +45,8 @@
 }
 
 .inspiration-quotes {
-  margin-top: 20px;
   position: relative;
-  height: 107px;
+  height: 63px;
 }
 
 .inspiration-quote {
@@ -73,5 +76,5 @@
   text-align: center;
   padding: 5px 0;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: $vertical-padding;
 }

@@ -18,6 +18,7 @@ $github-color: #000000;
 
 // Spacing variables
 $navbar-height: 40px;
+$vertical-padding: 40px;
 $outside-padding: 3%;
 
 // Z-Index variables
@@ -36,4 +37,21 @@ h2 {
   font-weight: 800;
   text-transform: uppercase;
   text-align: center;
+}
+
+%homepage-section {  padding: $vertical-padding $outside-padding; }
+.homepage-section-title {
+  position: relative;
+  padding-bottom: $vertical-padding;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    left: 50%;
+    top: 40px;
+    margin-left: -50px;
+    background: $charcoal;
+  }
 }

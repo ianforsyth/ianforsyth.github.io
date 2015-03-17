@@ -3,7 +3,7 @@ $about-breakpoint-2: 700px;
 $about-breakpoint-3: 500px;
 
 .about {
-  padding:5rem 5%;
+  @extend %homepage-section;
   background:$light-gray;
 }
 

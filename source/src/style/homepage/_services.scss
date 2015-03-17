@@ -1,6 +1,7 @@
 $services-breakpoint: 750px;
 
 .services {
+  @extend %homepage-section;
   background:white;
   position:relative;
 }
@@ -25,7 +26,10 @@ $services-breakpoint: 750px;
     left: 0%;
   }
 
-  @media(max-width: $services-breakpoint) { text-align:center; }
+  @media(max-width: $services-breakpoint) {
+    padding: 0 20px;
+    text-align:center;
+  }
 }
 
 .service-icon {
@@ -36,7 +40,7 @@ $services-breakpoint: 750px;
   @media(max-width: $services-breakpoint) {
     float:none;
     margin:0;
-    max-width: 300px;
+    max-width: 250px;
     width: 100%;
   }
 }
@@ -69,6 +73,9 @@ $services-breakpoint: 750px;
   @media(max-width: $services-breakpoint) {
     padding: 10px 0 0 0;
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    float: none;
 
     &:before {
       height: 3px;
@@ -84,6 +91,7 @@ $services-breakpoint: 750px;
   position: absolute;
   width: 100%;
   top: 48%;
+  left: 0;
 
   button {
     @include transition(.5s);

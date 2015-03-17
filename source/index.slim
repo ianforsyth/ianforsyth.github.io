@@ -7,8 +7,8 @@ header.hero
     p.hero-tagline I'm a software engineer who dabbles in design and craves fresh air.
     == partial 'social-media-icons'
 
-.services
-  h2 MY WHEELHOUSE
+.services#services
+  h2.services-title.homepage-section-title MY WHEELHOUSE
   .services-wrap
     .service.active data-index='1'
       img.service-icon src='src/img/icon-service-web-development.svg' alt='Web Development'
@@ -31,8 +31,8 @@ header.hero
     button.previous
     button.next
 
-.work
-  h2 LATEST WORK
+.work#work
+  h2.work-title.homepage-section-title LATEST WORK
   .worksamples
     .worksample
       .worksample-description
@@ -72,8 +72,8 @@ header.hero
       img.worksample-image class='sample' src='src/img/work/trocaire-social-media.jpg' alt='Trocaire College Social Media'
 
 
-.about
-  h2 About Me
+.about#about
+  h2.about-title.homepage-section-title About Me
   img.about-profile src='src/img/ian-forsyth.png' alt='Ian Forsyth'
   p.about-description Hi, I'm Ian, a recent Yale CS grad living in Brooklyn and working in NYC. Right now, I'm a full-time software engineer on a great team at VTS and I get to work part-time with the guys at TagitLabs. Beyond coding, I have a strong interest in product design and UI/UX. When I'm not sitting in front of my computer, I'm on my bike riding back-roads, running, skiing, wearing flannel, going for quiet walks, listening to good folk, or reading the occasional book.
   p.about-description Beyond what's listed below, I also have experience with Git, SVN, Twitter Bootstrap, Google Analytics, Heroku, Memcached, WordPress, Middleman, Jekyll, and Anchor CMS.
@@ -123,7 +123,7 @@ header.hero
   .inspiration-bg.jobs data-index='5'
   .inspiration-overlay
   .inspiration-wrap
-    h2 INSPIRATION
+    h2.inspiration-title.homepage-section-title INSPIRATION
     .inspiration-quotes
       .inspiration-quote.active data-index='0'
         p.inspiration-quote-text Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
@@ -145,10 +145,10 @@ header.hero
         p.inspiration-quote-author - Steve Jobs
     p.inspiration-button &#x25BC
 
-.home-blogpost
-  h2 Latest Post
+.home-blogpost#home-blogpost
+  h2.home-blogpost-title.homepage-section-title Latest Post
   .home-blogpost-wrap
-    a.home-blogpost-title href='#' = link_to blog.articles[0].title, blog.articles[0]
+    = link_to blog.articles[0].title, blog.articles[0], class: 'home-blogpost-title'
     p.home-blogpost-date = blog.articles[0].date.strftime('%b %e, %Y')
     .home-blogpost-tags
       - blog.articles[0].tags.each do |tag|

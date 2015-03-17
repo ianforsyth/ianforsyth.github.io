@@ -1,3 +1,6 @@
+quoteIndex = 0
+quoteSpeed = 500
+
 openSubscribe = ->
   $('.subscribe-button').parent().addClass 'active'
   $('.subscribe-button').text 'X'
@@ -42,18 +45,14 @@ $ ->
     if !$('.navmenu').hasClass('open')
       $('.navbar-menubutton').addClass 'open'
       $('.navmenu').addClass 'open'
-      scroll_position = $('body').scrollTop()
     else
       $('.navbar-menubutton').removeClass 'open'
       $('.navmenu').removeClass 'open'
-      $('body').scrollTop scroll_position
 
   # Close navigation if selection doesn't leave page.
-  $('nav a').click ->
-    if $('#home-flag').length > 0
-      if $(@).parent().is('.menu')
-        $('#mobile-nav').removeClass 'open'
-        $('navmenu').removeClass 'open'
+  $('.navmenu-sitelinks-link').click ->
+      $('.navbar-menubutton').removeClass 'open'
+      $('.navmenu').removeClass 'open'
 
   # Footer subscribe button animation and submition
   $('.subscribe-button').click ->
@@ -82,7 +81,7 @@ $ ->
     if keycode == 13
       displayWittyMessage 0
 
-  # Services controller
+  # Services slider
   $('.next').click ->
     current_index = $('.service.active').data('index')
     next_index = if current_index == 4 then 1 else current_index + 1
@@ -109,8 +108,6 @@ $ ->
     next_slide.addClass('active')
 
   # Handle quote switching and size changing
-  quoteIndex = 0
-  quoteSpeed = 500
   $('.inspiration-button').click ->
     quoteIndex = if quoteIndex == 5 then 0 else quoteIndex + 1
 
