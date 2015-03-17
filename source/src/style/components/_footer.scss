@@ -7,14 +7,14 @@
 }
 
 .footer-logo {
-  font-size: 120px;
-  height: 80px;
-  display: block;
+  display: inline-block;
+  overflow: hidden;
+}
 
-  &:before {
-    position: relative;
-    top: -25px;
-  }
+.footer-logo:before {
+  font-size: 120px;
+  display: block;
+  line-height: 80px;
 }
 
 .subscribe-button,

@@ -1,9 +1,10 @@
 - wrap_layout :layout do
 
   .blog
-    section#title-description
-      h2 Blog Title
-      p Blog description goes here.
+    .blog-hero
+      h2.blog-hero-title Ian's Blog
+      p.blog-hero-tagline Sometimes I write about life as a software engineer, sometimes I just write about life.
+      p.blog-hero-tagline Either way, it ends up here.
 
     - if current_article
       == partial 'blog-post-actions'
