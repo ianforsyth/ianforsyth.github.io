@@ -59,14 +59,51 @@ $post-margin: 25px;
   &:hover { background: $light-charcoal; }
 }
 
-#disqus_thread { max-width:80rem; padding:5%; margin:0 auto; }
+.post-codeblock {
+  max-height: 400px;
+  padding: $post-margin;
+  margin-bottom: $post-margin;
+  font-size: 12px;
+  overflow: auto;
+  background: $light-gray;
+}
 
-// p.block-quote { background:$light-gray; padding:4rem; position:relative; width:90%; margin:0 auto 2.5rem auto;
-//   @media (max-width:550px) { width:100%; }
-//   &:before { content:url('/src/img/quote-open.svg'); position:absolute; left:10px; top:10px; }
-//   &:after { content:url('/src/img/quote-close.svg'); position:absolute; right:10px; bottom:10px; }
-//   span { font-size:12px; display:block; width:100%; text-align:right; }
-// }
-// iframe { margin:0 auto 2.5rem auto; display:block }
+.post-video {
+  display: block;
+  margin: 0 auto $post-margin auto;
+}
 
-// pre { max-height:400px; margin-bottom:30px; font-size:1.2rem; }
+.post-blockquote {
+  background: $light-gray;
+  padding: 40px;
+  position: relative;
+  width: 90%;
+  margin: 0 auto $post-margin auto;
+
+  span {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    text-align: right;
+
+    &:before {
+      content: '—';
+    }
+  }
+
+  &:before {
+    content: url('/src/img/quote-open.svg');
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  &:after {
+    content: url('/src/img/quote-close.svg');
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+#disqus_thread { width: 100%; }

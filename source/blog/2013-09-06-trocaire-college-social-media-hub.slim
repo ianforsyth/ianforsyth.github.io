@@ -1,0 +1,36 @@
+---
+  title: Trocaire College Social Media Hub
+  tags: Case Study, API, PHP, Quinlan, AJAX
+  date: 2013/9/06
+  excerpt: "As a member of the development team at Quinlan, I did all the coding for Trocaire College's new social media hub. Trocaire wanted a one stop web page where it could display all it's most recent content. Schools are interesting in that they have to cater to a diverse audience of students, professors, parents, alumni, and prospects all at once."
+---
+
+p As a member of the development team at Quinlan, I did all the coding for Trocaire College's new social media hub. Trocaire wanted a one stop web page where it could display all it's most recent content. Schools are interesting in that they have to cater to a diverse audience of students, professors, parents, alumni, and prospects all at once. The design was done by <a href="http://brandonstenzel.com">Brandon Stenzel</a>, and his idea was to give each social media platform its own portal and skin, eventually tying it all together with a consistent theme. That meant a lot of custom code and API calling.
+
+a.post-button target="_blank" href="http://www.trocaire.edu/social-media/" See The Site
+
+p There are five sites Trocaire focuses its social media efforts on: Facebook, Twitter, Instagram, Pinterest, and its Wordpress blog. Trocaire also has a presence on Google+, LinkedIn, and Youtube but those were to be slightly deemphasized on the page.
+
+p The blog is put at the forefront, it's well maintained and updated frequently. I set up a custom Wordpress query on the other end to feed some JSON containing exactly what I needed. The post date is set over the feature image and the content is custom truncated to fit the portal. Twitter is also on the top level but recently, Twitter has made it difficult to access data. They offer an annoying OAuth process or an entirely uncustomizable widget (that wouldn't jive with our theme). So, I turned to a tool I've used before, <a href="http://jasonmayes.com/">Jason Mayes&rsquo;s</a> <a href="http://jasonmayes.com/projects/twitterApi/#sthash.92EvFBVS.dpbs">Twitter Fetcher</a>. It uses one of those ugly widgets but scrapes the important content with javascript and injects it into an html element, allowing easy css styling.
+
+img src="/src/img/blog-img/trocaire-blog-twitter.jpg" alt="Trocaire College Blog and Twitter Feed"
+
+p Next was Facebook and Instagram. The Facebook API is very comprehensive and great to work with, so pulling in the necessary pieces for the Trocaire portal was relatively easy. Styling took a bit of work because there are a lot of little pieces to put together. Each post included like count, comment count, links for like, comment, and share, and the post content itself. Unfortunately, the content coming from the API is in plain text so in order to have active links and visible images it had to be run through a custom RegEx function. Instagram was easy in comparison, just an access token, a curl request, parsing some JSON, and laying out the images in a simple grid.
+
+img src="/src/img/blog-img/trocaire-facebook-instagram.jpg" alt="Trocaire College Facebook and Instagram"
+
+p LinkedIn and Google+ were afterthoughts in the grand scheme of things. The college doesn't heavily promote on either but they did still wanted some kind of representation in the layout. Both sites have simple widgets so I added those in with a styled header and fixed width. They do flow nicely with the rest of the portals and draw enough attention to justify their placement.
+
+img src="/src/img/blog-img/trocaire-google-linkedin.jpg" alt="Trocaire College Google+ and LinkedIn"
+
+p Pinterest was an interesting challenge. During the time I was coding this page, Pinterest, to the displeasure of the development community, had not released a public API. Instead, they had the option to display a single pin, based on a pin id, or a collage of just images. In my poking around, I found a nice artifact in the Pinterest system that I could curl and get all the pin ids for a certain user. So I just looped through the ids and created multiple pin widgets and created a great looking portal that looked just like a Pinterest board. To my dismay, after a few weeks the loophole I had found was closed up, my only remaining option was to use their collage widget. The client was still happy with the appearance but it wasn't as satisfying.
+
+p The final portal was for YouTube. Although Trocaire does have content on the ever-popular video streaming site, it's not updated very frequently so it was relegated to the bottom. This is probably the most custom of the portals. With the Youtube API I was able to pull in the video embed code, title, and description. The portal features a sidebar, built from scratch, to display videos beyond the most recent and when clicked, they swap into the player and auto-play. It's a nice feature and I wish it was more prominent but at the least, it was fun to work on.
+
+img src="/src/img/blog-img/trocaire-youtube.jpg" alt="Trocaire College Youtube">
+
+p The last a biggest challenge to overcome was page speed. With so many API calls heading out, the page was taking forever to display. So, all the portals are setup as placeholders and the content is pulled in with AJAX so there's no wait for the user. All the calls are coded into a PHP class and then that class's functions handle each portal. As a final boost, I added memcache to the page. This was my first time setting it up and I think it's phenomenal, the difference is very noticeable. Storing a few JSON documents and simply pulling from them is much quicker and the cache clears every few hours.
+
+p Overall this was a really fun project for me. It offered some interesting challenges along with a few easy pieces to keep me moving forward. I got to tackle some new APIs and new technologies and that's never a dull experience. If you have some time, check the page out.
+
+a.post-button target="_blank" href="http://www.trocaire.edu/social-media/" See The Site

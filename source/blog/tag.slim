@@ -29,6 +29,8 @@ pageable: true
     - if page_number > 1
       = link_to '< PREV', prev_page, class: 'pagination-previous'
     - (1..num_pages).each do |num|
-      = link_to num, "/blog/page/#{num}", class: "#{'active' if num == page_number} pagination-pagenumber"
+        - page_link_path = next_page ? next_page.url : prev_page.url
+        - page_link = (num == 1) ? page_link_path.gsub(/page\/[0-9]#?\//, '') : page_link_path.gsub(/[0-9]#?/, num.to_s)
+        = link_to "#{num}", "#{page_link}", class: "#{'active' if num == page_number} pagination-pagenumber"
     - if page_number != num_pages
       = link_to 'NEXT >', next_page, class: 'pagination-next'

@@ -33,6 +33,9 @@ $pagination-height: 60px;
   line-height: $pagination-height;
   padding:0 2px;
 
-  &.active { color:lighten($charcoal, 20%); }
+  &.active {
+    pointer-events: none;
+    color:lighten($charcoal, 20%);
+  }
 }
 
