@@ -24,9 +24,10 @@ activate :blog do |blog|
 
   blog.tag_template = 'blog/tag.html'
   blog.taglink = ':tag/index.html'
-
-  page "/blog/*", :layout => :blog_layout
 end
+
+page "/blog/*", :layout => :blog_layout
+page "/docs/*", :layout => :docs_layout
 
 activate :directory_indexes
 

@@ -3,18 +3,7 @@ html
 head
   title Ian Forsyth
 
-  meta charset='utf-8'>
-  meta name='viewport' content='initial-scale=1'
-  meta name='description' content='I&rsquo;m Ian Forsyth, a recent Yale grad living and working in NYC. I&rsquo;m a software engineer who appreciates great design and loves the outdoors. I spend my professional hours working full-time at VTS and part-time at TagitLabs, feel free to get in touch.'
-  meta name='robots' content='index, follow'
-  meta name='googlebot' content='index, follow'
-
-  meta property='og:title' content='Ian Forsyth'
-  meta property='og:type' content='website'
-  meta property='og:url' content='/'
-  meta property='og:site_name' content='Ian Forsyth'
-  meta property='og:description' content='Ian Forsyth is a web and mobile developer who dabbles in design. He&rsquo;s currently a computer science student at Yale University, a developer at Quinlan, and available for freelance work. Feel free to get in touch.'
-
+  == partial 'meta'
   == partial 'favicon'
   == partial 'ga-code'
   = stylesheet_link_tag 'style'

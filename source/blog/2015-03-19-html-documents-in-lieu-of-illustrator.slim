@@ -1,0 +1,42 @@
+---
+  title: HTML Documents In Lieu of Illustrator
+  tags: Design, HTML/CSS
+  Date: 2015/03/19
+  published: false
+  excerpt: ""
+---
+
+p It's a terrible feeling when you're working on a project and it should be simple, but because you can't seem to find the right tools, it becomes frustrating. Recently, I've had to design a few documents, including invoices for my freelance business and an updated resume. Logically I should jump into Adobe Illustrator, but I've tried to avoid Illustrator lately. I think it's bloated and hard to navigate. Instead, I use <a href="http://www.bohemiancoding.com/sketch/">Bohemian Coding&rsquo;s Sketch</a> for all my layouts and graphic work and I&rsquo;m really comfortable with it. Problem is, Sketch doesn&rsquo;t have inch measurements, only pixels, so creating a well-formatted printable document wasn&rsquo;t going to work. Luckily, I found a great way to do just that using tools I&rsquo;m beyond familiar with - HTML and CSS.
+
+p After getting frustrated, I figured there had to be a way to just lay things out in HTML. That way, I could line everything up without using a maze of guides, everything would be uniform because of the CSS styling, and making tweaks to the look would be quick and easy. But I've never styled an HTML document for print and I didn't even know if it could be done. To Google! Of course, the top result comes from Chris Coyier's <a target="_blank" href="http://css-tricks.com/">CSS-Tricks</a>. Chris&rsquo;s site is a great resource and I always find myself learning new things, this visit was no exception.
+
+p The article is <a target="_blank" href="http://css-tricks.com/html-invoice/">Make an Editable/Printable HTML Invoice</a> and although it goes a bit beyond what I was looking for, it opened a lot of doors. The great thing about Chris&rsquo;s version is it&rsquo;s full of HTML textareas that can be edited right on-site. I didn&rsquo;t use this feature, but it does give me a great rainy day project if I want to plug these layouts into a database and populate them with a back-end. But for now, I&rsquo;m happy with static text on a per document basis.
+
+p After looking at the demo and poking around the source code, there were really only a couple key things I needed to take away. First, I didn't know you could use inches as a CSS unit, but that's obviously key for this process. Second, there's a media query for print. It only applies style when the user clicks print and in this case, us used to strip out unnecessary padding and features. With those two points in mind, there's nothing a strong HTML/CSS programmer can't create.
+
+p Here's what my CSS looked like to create an on screen page and then strip out the extra for printing. All the content goes inside a &lt;div class="page"&gt;&lt;/div&gt;.
+
+pre.post-codeblock
+  | body {
+      background:#dddddd;
+      padding:.5in;
+      min-width:9.5in;
+      min-height:12in;
+    }
+
+    .page {
+      background:white;
+      height:11in;
+      width:8.5in;
+      margin:0 auto .5in auto;
+      box-shadow:0px 0px 10px rgba(black, .5);
+      padding:.25in; position:relative;
+    }
+
+    @media print {
+      * { -webkit-print-color-adjust:exact; }
+      body { background:none; padding:0; min-height:0; min-width:0; }
+      .page { box-shadow:none; margin:0; box-shadow:0; }
+    }
+
+p If you'd like to take a look at my some of one my documents you can check out a <a target="_blank" href="/invoice">sample invoice</a>. When I&rsquo;m all finished, I print the page to a PDF and end up with a great final product. I&rsquo;m definitely stronger at web programming than dragging things around an Illustrator window.

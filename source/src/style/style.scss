@@ -1,11 +1,12 @@
 @import '_ian-forsyth-reset';
 
 @import 'components/_ui-kit';
+@import 'components/_common';
 @import 'components/_font';
-@import 'components/_tags';
 @import 'components/_navigation';
 @import 'components/_social-media-links';
 @import 'components/_footer.scss';
+@import 'components/_tags';
 
 @import 'homepage/_hero';
 @import 'homepage/_services';
@@ -21,4 +22,3 @@
 @import 'blog/_post.scss';
 
 @import 'blog/post-specific/_yale-cycling';
-

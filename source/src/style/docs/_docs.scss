@@ -1,0 +1,46 @@
+body {
+  background: $gray;
+  padding: .5in;
+  min-width: 9.5in;
+  min-height: 12in;
+}
+
+.sitedoc {
+  background: white;
+  height: 11in;
+  width: 8.5in;
+  margin: 0 auto .5in auto;
+  box-shadow: 0px 0px 10px rgba(black, .5);
+  position: relative;
+}
+
+// #cover-letter {
+//   header { background:$charcoal; color:white; padding:.5in .5in .5in .5in; @include clearfix;
+//     h1 { float:left; font-size:50px; font-weight:600; line-height:42px;}
+//     p.contact-info { float:right; font-size:10pt; text-align:right; margin-top:20px; }
+//     h2 { font-size:10pt; clear:left; float:left; width:300px; font-weight:600; margin-top:10px; }
+//   }
+//   #content { margin-top:.25in; padding:0 1in;
+//       p { font-size:11pt; font-weight:300; margin-bottom:.125in; line-height:14pt;  }
+//       p.opening { margin-bottom:.125in; }
+//   }
+// }
+
+@media print {
+  * { -webkit-print-color-adjust:exact; }
+  body { background:none; padding:0; min-height:0; min-width:0; }
+  .page { box-shadow:none; margin:0; box-shadow:0; padding:.25in; }
+  #invoice {
+    header { padding:.25in; }
+    header p.me { right:.25in; bottom:.25in; }
+    .project-heading, .project-total { padding:.125in .25in }
+  }
+  #resume {
+    header { padding:.25in; }
+    #attributes { padding:0; }
+  }
+  #cover-letter {
+    header { padding:.25in; }
+    #content { padding:0 .75in; }
+  }
+}
