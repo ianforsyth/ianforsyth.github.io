@@ -27,7 +27,7 @@ p Pinterest was an interesting challenge. During the time I was coding this page
 
 p The final portal was for YouTube. Although Trocaire does have content on the ever-popular video streaming site, it's not updated very frequently so it was relegated to the bottom. This is probably the most custom of the portals. With the Youtube API I was able to pull in the video embed code, title, and description. The portal features a sidebar, built from scratch, to display videos beyond the most recent and when clicked, they swap into the player and auto-play. It's a nice feature and I wish it was more prominent but at the least, it was fun to work on.
 
-img src="/src/img/blog-img/trocaire-youtube.jpg" alt="Trocaire College Youtube">
+img src="/src/img/blog-img/trocaire-youtube.jpg" alt="Trocaire College Youtube"
 
 p The last a biggest challenge to overcome was page speed. With so many API calls heading out, the page was taking forever to display. So, all the portals are setup as placeholders and the content is pulled in with AJAX so there's no wait for the user. All the calls are coded into a PHP class and then that class's functions handle each portal. As a final boost, I added memcache to the page. This was my first time setting it up and I think it's phenomenal, the difference is very noticeable. Storing a few JSON documents and simply pulling from them is much quicker and the cache clears every few hours.
 
