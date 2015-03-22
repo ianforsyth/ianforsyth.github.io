@@ -14,18 +14,6 @@ body {
   position: relative;
 }
 
-// #cover-letter {
-//   header { background:$charcoal; color:white; padding:.5in .5in .5in .5in; @include clearfix;
-//     h1 { float:left; font-size:50px; font-weight:600; line-height:42px;}
-//     p.contact-info { float:right; font-size:10pt; text-align:right; margin-top:20px; }
-//     h2 { font-size:10pt; clear:left; float:left; width:300px; font-weight:600; margin-top:10px; }
-//   }
-//   #content { margin-top:.25in; padding:0 1in;
-//       p { font-size:11pt; font-weight:300; margin-bottom:.125in; line-height:14pt;  }
-//       p.opening { margin-bottom:.125in; }
-//   }
-// }
-
 @media print {
   * { -webkit-print-color-adjust: exact; }
 

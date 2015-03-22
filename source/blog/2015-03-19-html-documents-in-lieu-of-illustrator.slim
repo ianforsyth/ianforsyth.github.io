@@ -1,8 +1,7 @@
 ---
   title: HTML Documents In Lieu of Illustrator
   tags: Design, HTML/CSS
-  Date: 2015/03/19
-  published: false
+  Date: 2015/03/22
   excerpt: ""
 ---
 
@@ -14,29 +13,41 @@ p The article is <a target="_blank" href="http://css-tricks.com/html-invoice/">M
 
 p After looking at the demo and poking around the source code, there were really only a couple key things I needed to take away. First, I didn't know you could use inches as a CSS unit, but that's obviously key for this process. Second, there's a media query for print. It only applies style when the user clicks print and in this case, us used to strip out unnecessary padding and features. With those two points in mind, there's nothing a strong HTML/CSS programmer can't create.
 
-p Here's what my CSS looked like to create an on screen page and then strip out the extra for printing. All the content goes inside a &lt;div class="page"&gt;&lt;/div&gt;.
+p Here's what my CSS looked like to create an on screen page and then strip out the extra for printing.
 
 pre.post-codeblock
   | body {
-      background:#dddddd;
-      padding:.5in;
-      min-width:9.5in;
-      min-height:12in;
+      background: $gray;
+      padding: .5in;
+      min-width: 9.5in;
+      min-height: 12in;
     }
 
-    .page {
-      background:white;
-      height:11in;
-      width:8.5in;
-      margin:0 auto .5in auto;
-      box-shadow:0px 0px 10px rgba(black, .5);
-      padding:.25in; position:relative;
+    .sitedoc {
+      background: white;
+      height: 11in;
+      width: 8.5in;
+      margin: 0 auto .5in auto;
+      box-shadow: 0px 0px 10px rgba(black, .5);
+      position: relative;
     }
 
     @media print {
-      * { -webkit-print-color-adjust:exact; }
-      body { background:none; padding:0; min-height:0; min-width:0; }
-      .page { box-shadow:none; margin:0; box-shadow:0; }
+      * { -webkit-print-color-adjust: exact; }
+
+      body {
+        background: none;
+        padding: 0;
+        min-height: 0;
+        min-width: 0;
+      }
+
+      .sitedoc {
+        box-shadow: none;
+        margin: 0;
+        box-shadow: 0;
+        padding: .0625in;
+      }
     }
 
-p If you'd like to take a look at my some of one my documents you can check out a <a target="_blank" href="/invoice">sample invoice</a>. When I&rsquo;m all finished, I print the page to a PDF and end up with a great final product. I&rsquo;m definitely stronger at web programming than dragging things around an Illustrator window.
+p If you'd like to take a look at my some of one my documents you can check out a <a target="_blank" href="/docs/invoice">sample invoice</a>. When I&rsquo;m all finished, I print the page to a PDF and end up with a great final product. I&rsquo;m definitely stronger at web programming than dragging things around an Illustrator window.

@@ -62,9 +62,10 @@ $post-margin: 25px;
 .post-codeblock {
   max-height: 400px;
   padding: $post-margin;
-  margin-bottom: $post-margin;
+  margin: 0 auto $post-margin auto;
   font-size: 12px;
   overflow: auto;
+  width: 90%;
   background: $light-gray;
 }
 
