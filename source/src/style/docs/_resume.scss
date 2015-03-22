@@ -68,11 +68,6 @@
   font-weight: 300;
 }
 
-.resume-attr-secondarydate {
-  @extend .resume-attr-date;
-  top: 52pt;
-}
-
 @media print {
   .resume-header { padding: .25in; }
   .resume-attrs { padding: 0; }
