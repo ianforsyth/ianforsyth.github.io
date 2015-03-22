@@ -9,12 +9,12 @@
 .footer-logo {
   display: inline-block;
   overflow: hidden;
-}
 
-.footer-logo:before {
-  font-size: 120px;
-  display: block;
-  line-height: 80px;
+  &:before {
+    font-size: 120px;
+    display: block;
+    line-height: 80px;
+  }
 }
 
 .subscribe-button,

@@ -1,34 +1,153 @@
-#invoice {
-  header { background:$charcoal; color:white; padding:.5in; @include clearfix; position:relative;
-    img { margin-bottom:.25in; float:left; }
-    p { font-size:1.6rem; font-weight:400; }
-    p.invoice-data{ float:right; font-weight:400; text-align:right; }
-    p.client { float:left; clear:left;  }
-    p.me { position:absolute; right:.5in; bottom:.5in; text-align:right; }
+
+.invoice-header {
+  @include clearfix;
+  background:$charcoal;
+  color:white;
+  padding:.5in;
+  position:relative;
+  font-size: 16px;
+}
+
+.invoice-header-logo {
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: .25in;
+
+  &:before {
+    font-size: 120px;
+    display: block;
+    line-height: 80px;
   }
-  .project-heading { background:$gray; @include clearfix; padding:.125in .5in;
-    p { font-size:1.4rem; float:left; font-weight:900; }
-    p.project-title { width:70%; text-transform:uppercase; }
-    p.hrs { width:15%; text-align:right; }
-    p.cost { width:15%; text-align:right; position:abso }
-  }
-  .work {
-    article { padding:.125in 0; margin:0 auto; width:7.5in; border-bottom:1px solid $charcoal; @include clearfix;
-      p { font-size:1.4rem; float:left; font-weight:900; }
-      p.title { width:70%; text-transform:uppercase; }
-      p.hrs { width:15%; text-align:right; text-transform:uppercase; }
-      p.cost { width:15%; text-align:right; text-transform:uppercase; }
-      p.description { width:70%; font-size:1.2rem; font-weight:400; }
-      &:last-of-type { border:0; }
-    }
-  }
-  .project-total { background:$gray; @include clearfix; padding:.125in .5in;
-    p { font-size:1.4rem; float:left; font-weight:900; }
-    p.total { width:70%; text-transform:uppercase; }
-    p.hrs { width:15%; text-align:right; }
-    p.cost { width:15%; text-align:right; }
-  }
-  footer { position:absolute; bottom:0; left:0; padding:.25in;
-    p { font-size:1.2rem; text-align:center;}
-  }
+}
+
+.invoice-header-data {
+  float: right;
+  font-weight: 400;
+  text-align: right;
+}
+
+.invoice-header-client {
+  float: left;
+  clear: left;
+}
+
+.invoice-header-contactinfo {
+  position: absolute;
+  right: .5in;
+  bottom: .5in;
+  text-align: right;
+}
+
+.invoice-project {
+  @include clearfix;
+  background:$gray;
+  padding:.125in .5in;
+}
+
+.invoice-project p {
+  float: left;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.invoice-project-title {
+  width:70%;
+  text-transform:uppercase;
+}
+
+.invoice-project-hrs {
+  width:15%;
+  text-align:right;
+}
+
+.invoice-project-cost {
+  width:15%;
+  text-align:right;
+  position:abso
+}
+
+
+.invoice-billing {
+  @include clearfix;
+  padding: .125in 0;
+  margin: 0 auto;
+  width: 7.5in;
+  border-top: 1px solid $gray;
+
+  &:first-child { border:0; }
+}
+
+.invoice-billing-title,
+.invoice-billing-hrs,
+.invoice-billing-cost,
+.invoice-billing-description {
+  float: left;
+  font-size: 14px;
+}
+
+.invoice-billing-title {
+  width: 70%;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.invoice-billing-hrs {
+  width: 15%;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.invoice-billing-cost {
+  width: 15%;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.invoice-billing-description {
+  width: 70%;
+  font-size: 1.2rem;
+}
+
+.invoice-total {
+  @include clearfix;
+  background: $gray;
+  padding: .125in .5in;
+}
+
+.invoice-total-title,
+.invoice-total-hrs,
+.invoice-total-cost {
+  float: left;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.invoice-total-title {
+  width: 70%;
+  text-transform: uppercase;
+}
+
+.invoice-total-hrs {
+  width: 15%;
+  text-align: right;
+}
+
+.invoice-total-cost {
+  width: 15%;
+  text-align: right;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: .25in;
+}
+
+.footer-tagline,
+.footer-pagination {
+  font-size: 1.2rem;
+  text-align: center;
 }
