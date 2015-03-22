@@ -30,6 +30,7 @@ displayWittyMessage = (counter) ->
 
 $(window).on 'load', ->
   $('body').removeClass 'preload'
+  $('.hero').addClass 'hero-postload'
 
 $(window).resize ->
   $('.inspiration-quotes').css { 'height': "#{$('.inspiration-quote.active').height()}px" }, quoteSpeed
@@ -40,6 +41,12 @@ $(window).scroll ->
   $('header').css 'top': yPos
 
 $ ->
+  # $(".hero-overlay").css({'opacity':'1'});
+  # $('.hero-wrap').css({'padding-top':'+=32px', 'opacity':'0'});
+
+  # $('.hero-overlay').delay(500).animate({'opacity':'.9'}, 1000);
+  # $('.hero-wrap').delay(500).animate({'padding-top':'-=32px', 'opacity':'1'}, 750);
+
   # Navigation animation
   $('.navbar-menubutton').click ->
     if !$('.navmenu').hasClass('open')

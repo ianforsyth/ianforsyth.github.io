@@ -1,26 +1,27 @@
 .hero {
-  background:url(../img/hero.jpg);
-  background-size:cover;
-  text-align:center;
-  min-height:500px;
-  height: 100%;
-  color:white;
-  position:relative;
+  background: url(../img/hero.jpg);
+  background-size: cover;
+  text-align: center;
+  min-height: 500px;
+  height:  100%;
+  color: white;
+  position: relative;
 }
 
 .hero-overlay {
-  height:100%;
-  width:100%;
-  background:$charcoal;
-  position:absolute;
-  top:0;
-  left:0;
-  opacity:0.5;
+  height: 100%;
+  width: 100%;
+  background: $charcoal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
 }
 
 .hero-wrap {
   @include vertical-align;
-  padding: 0 $outside-padding;
+  padding: 32px $outside-padding 0 $outside-padding;
+  opacity: 0;
 }
 
 .hero-tagline {
@@ -29,4 +30,17 @@
   position: relative;
   margin: 10px auto 20px auto;
   max-width: 600px;
+}
+
+.hero.hero-postload {
+  .hero-overlay {
+    @include transition(1s);
+    opacity: 0.5;
+  }
+
+  .hero-wrap {
+    @include transition(1s);
+    padding-top: 0px;
+    opacity: 1;
+  }
 }

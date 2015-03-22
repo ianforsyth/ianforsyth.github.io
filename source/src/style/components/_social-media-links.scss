@@ -1,5 +1,5 @@
 .socialmedia-link {
-  @include transition(.5s);
+  @include transition(.5s, color);
   position: relative;
   display: inline-block;
   font-size: 40px;
