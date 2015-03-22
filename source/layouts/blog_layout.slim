@@ -13,7 +13,7 @@
         h3.post-title = current_article.title
         h4.post-authordate
           | By Ian Forsyth on
-          =< current_article.date.strftime('%b %e,  %Y')
+          =< current_article.date.strftime('%B %e,  %Y')
         .post-tags
           - current_article.tags.each do |tag|
             .tag
