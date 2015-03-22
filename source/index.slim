@@ -8,7 +8,7 @@ header.hero
     == partial 'social-media-icons'
 
 .services#services
-  h2.services-title.homepage-section-title MY WHEELHOUSE
+  h2.services-title.homepage-section-title My Wheelhouse
   .services-wrap
     .service.active data-index='1'
       img.service-icon src='src/img/icon-service-web-development.svg' alt='Web Development'
@@ -32,7 +32,7 @@ header.hero
     button.next
 
 .work#work
-  h2.work-title.homepage-section-title LATEST WORK
+  h2.work-title.homepage-section-title Latest Work
   .worksamples
     .worksample
       .worksample-description
@@ -58,18 +58,18 @@ header.hero
         .worksample-description-text An iOS app used by WRI to calculate wire size and spacing based on bar designations.
         a.worksample-description-link href='/blog/wri-calculator-app' Case Study
       img.worksample-image src='src/img/work/wri.jpg' alt='WRI Calculator App'
-    .worksample#work-illustrations
-      .worksample-description
-        .worksample-description-title Design Work
-        .worksample-description-text Head on over to Dribbble to see a collection of illustrations, logos, and UI mocks.
-        a.worksample-description-link href='https://dribbble.com/ianforsyth' Dribbble
-      img.worksample-image src='src/img/work/illustrations.jpg' alt='Illustrations'
-    .worksample#work-trocaire-social-media
+    .worksample
       .worksample-description
         .worksample-description-title Trocaire Social Media
         .worksample-description-text A one stop social media hub for Buffalo's Trocaire College.
         a.worksample-description-link href='/blog/trocaire-college-social-media-hub' Case Study
       img.worksample-image src='src/img/work/trocaire-social-media.jpg' alt='Trocaire College Social Media'
+    .worksample
+      .worksample-description
+        .worksample-description-title Design Work
+        .worksample-description-text Head on over to Dribbble to see my collection of illustrations, logos, and UI mocks.
+        a.worksample-description-link href='https://dribbble.com/ianforsyth' Dribbble
+      img.worksample-image src='src/img/work/illustrations.jpg' alt='Illustrations'
 
 
 .about#about
@@ -123,7 +123,7 @@ header.hero
   .inspiration-bg.jobs data-index='5'
   .inspiration-overlay
   .inspiration-wrap
-    h2.inspiration-title.homepage-section-title INSPIRATION
+    h2.inspiration-title.homepage-section-title Inspiration
     .inspiration-quotes
       .inspiration-quote.active data-index='0'
         p.inspiration-quote-text Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
@@ -146,7 +146,7 @@ header.hero
     p.inspiration-button &#x25BC
 
 .home-blogpost#home-blogpost
-  h2.home-blogpost-title.homepage-section-title Latest Post
+  h2.home-blogpost-title.homepage-section-title Latest Rambling
   .home-blogpost-wrap
     = link_to blog.articles[0].title, blog.articles[0], class: 'home-blogpost-title'
     p.home-blogpost-date = blog.articles[0].date.strftime('%b %e, %Y')
