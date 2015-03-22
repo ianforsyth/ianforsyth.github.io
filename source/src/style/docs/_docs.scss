@@ -27,20 +27,19 @@ body {
 // }
 
 @media print {
-  * { -webkit-print-color-adjust:exact; }
-  body { background:none; padding:0; min-height:0; min-width:0; }
-  .page { box-shadow:none; margin:0; box-shadow:0; padding:.25in; }
-  #invoice {
-    header { padding:.25in; }
-    header p.me { right:.25in; bottom:.25in; }
-    .project-heading, .project-total { padding:.125in .25in }
+  * { -webkit-print-color-adjust: exact; }
+
+  body {
+    background: none;
+    padding: 0;
+    min-height: 0;
+    min-width: 0;
   }
-  #resume {
-    header { padding:.25in; }
-    #attributes { padding:0; }
-  }
-  #cover-letter {
-    header { padding:.25in; }
-    #content { padding:0 .75in; }
+
+  .sitedoc {
+    box-shadow: none;
+    margin: 0;
+    box-shadow: 0;
+    padding: .0625in;
   }
 }

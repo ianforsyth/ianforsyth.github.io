@@ -151,3 +151,19 @@
   font-size: 1.2rem;
   text-align: center;
 }
+
+@media print {
+  .invoice-header { padding:.25in; }
+
+  .invoice-header-contactinfo {
+    right:.25in;
+    bottom:.25in;
+  }
+
+  .invoice-billing { width: 8in;}
+
+  .invoice-project,
+  .invoice-total {
+    padding: .125in .1875in
+  }
+}

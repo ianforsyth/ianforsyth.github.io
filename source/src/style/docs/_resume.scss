@@ -2,7 +2,7 @@
   @include clearfix;
   background: $charcoal;
   color: white;
-  padding: .5in .5in .5in .5in;
+  padding: .5in;
 }
 
 .resume-contactinfo { float: left; }
@@ -73,3 +73,7 @@
   top: 52pt;
 }
 
+@media print {
+  .resume-header { padding: .25in; }
+  .resume-attrs { padding: 0; }
+}
