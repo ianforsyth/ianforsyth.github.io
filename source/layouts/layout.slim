@@ -1,49 +1,49 @@
 doctype html
 html
-head
-  title Ian Forsyth
+  head
+    title Ian Forsyth
 
-  == partial 'meta'
-  == partial 'favicon'
-  == partial 'ga-code'
-  = stylesheet_link_tag 'style'
-  /![if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]
+    == partial 'meta'
+    == partial 'favicon'
+    == partial 'ga-code'
+    = stylesheet_link_tag 'style'
+    /![if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]
 
-body.preload
-  .navbar
-    a.icon-logo.navbar-homelink href='/' Ian Forsyth
-    .navbar-menubutton
-      div
-      div
-      div
-    a.icon-airplane.navbar-contactlink href='mailto:ian@ianforsyth.com'
+  body.preload
+    .navbar
+      a.icon-logo.navbar-homelink href='/' Ian Forsyth
+      .navbar-menubutton
+        div
+        div
+        div
+      a.icon-airplane.navbar-contactlink href='mailto:ian@ianforsyth.com'
 
-  .navmenu
-    .navmenu-wrap
-      a.navmenu-logo.icon-logo href='/'
-      h1.navmenu-homelink
-        a href='/' Ian Forsyth
-      .navmenu-sitelinks
-        a.navmenu-sitelinks-link href='/#services' Wheelhouse
-        a.navmenu-sitelinks-link href='/#work' Latest Work
-        a.navmenu-sitelinks-link href='/#about' Meet Me
-        a.navmenu-sitelinks-link href='/blog' The Blog
+    .navmenu
+      .navmenu-wrap
+        a.navmenu-logo.icon-logo href='/'
+        h1.navmenu-homelink
+          a href='/' Ian Forsyth
+        .navmenu-sitelinks
+          a.navmenu-sitelinks-link href='/#services' Wheelhouse
+          a.navmenu-sitelinks-link href='/#work' Latest Work
+          a.navmenu-sitelinks-link href='/#about' Meet Me
+          a.navmenu-sitelinks-link href='/blog' The Blog
 
 
-  == yield
+    == yield
 
-  .footer
-    a.footer-logo.icon-logo href='/'
-    == partial 'social-media-icons'
+    .footer
+      a.footer-logo.icon-logo href='/'
+      == partial 'social-media-icons'
 
-    .subscribe
-      p.subscribe-button Subscribe
-      input.subscribe-text type='email' name='email' placeholder='Email' value=''
-      p.subscribe-submit Submit
+      .subscribe
+        p.subscribe-button Subscribe
+        input.subscribe-text type='email' name='email' placeholder='Email' value=''
+        p.subscribe-submit Submit
 
-  p.copyright &copy; Ian Forsyth 2015
+    p.copyright &copy; Ian Forsyth 2015
 
-  script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'
-  / For offline working
-  / = javascript_include_tag 'jquery-1.11.2.min'
-  = javascript_include_tag 'script'
+    script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'
+    / For offline working
+    / = javascript_include_tag 'jquery-1.11.2.min'
+    = javascript_include_tag 'script'
