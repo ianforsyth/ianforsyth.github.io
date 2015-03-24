@@ -15,39 +15,6 @@ p After looking at the demo and poking around the source code, there were really
 
 p Here's what my CSS looked like to create an on screen page and then strip out the extra for printing.
 
-pre.post-codeblock
-  | body {
-      background: $gray;
-      padding: .5in;
-      min-width: 9.5in;
-      min-height: 12in;
-    }
-
-    .sitedoc {
-      background: white;
-      height: 11in;
-      width: 8.5in;
-      margin: 0 auto .5in auto;
-      box-shadow: 0px 0px 10px rgba(black, .5);
-      position: relative;
-    }
-
-    @media print {
-      * { -webkit-print-color-adjust: exact; }
-
-      body {
-        background: none;
-        padding: 0;
-        min-height: 0;
-        min-width: 0;
-      }
-
-      .sitedoc {
-        box-shadow: none;
-        margin: 0;
-        box-shadow: 0;
-        padding: .0625in;
-      }
-    }
+script src="https://gist.github.com/ianforsyth/25fc557386a0e4dc2af7.js"
 
 p If you'd like to take a look at my some of one my documents you can check out a <a target="_blank" href="/docs/invoice">sample invoice</a>. When I&rsquo;m all finished, I print the page to a PDF and end up with a great final product. I&rsquo;m definitely stronger at web programming than dragging things around an Illustrator window.

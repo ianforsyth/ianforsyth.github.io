@@ -41,71 +41,7 @@ p.post-caption The styled map on the contact page. Uses toned down grays for the
 
 p It's a simple matter of adding some javascript arguments to the map initialization. Again, this is a very simple example, the options to style these maps are endless. (Check out this great <a href="http://gmaps- samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html">tool</a> to test your styles.)
 
-pre.post-codeblock
-  | window.onload = function () {
-      var styles = [
-        {
-          stylers: [
-            { saturation: -100 },
-            { lightness: -17 }
-          ]
-        }
-      ];
-
-      // Create a new StyledMapType object, passing it the array of styles,
-      // as well as the name to be displayed on the map type control.
-      var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
-
-      // Create a map object, and include the MapTypeId to add
-      // to the map type control.
-      var mapOptions = {
-        disableDefaultUI: false,
-        navigationControl: true,
-        scrollwheel: true,
-          zoom: 18,
-        center: new google.maps.LatLng(41.310872, -72.927806),
-        streetViewControl: false,
-        mapTypeControl: false,
-        navigationControlOptions: {
-          position: google.maps.ControlPosition.TOP_LEFT
-        },
-        zoomControlOptions: {
-          position: google.maps.ControlPosition.TOP_LEFT
-        },
-
-        mapTypeControlOptions: {
-          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-        }
-      };
-
-      var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-
-      //Associate the styled map with the MapTypeId and set it to display.
-      map.mapTypes.set('map_style', styledMap);
-      map.setMapTypeId('map_style');
-
-      var image = new google.maps.MarkerImage(
-        '../src/img/maps-icon.png',
-        new google.maps.Size(47, 68), // size
-        new google.maps.Point(0,0), // origin
-        new google.maps.Point(23, 68) // anchor
-      );
-      var shadow = new google.maps.MarkerImage(
-        '../src/img/maps-icon-shadow.png',
-        new google.maps.Size(61, 68), // size
-        new google.maps.Point(0,0), // origin
-        new google.maps.Point(23, 68) // anchor
-      );
-
-      var myLatLng = new google.maps.LatLng(41.310872, -72.927806);
-
-      var beachMarker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        shadow: shadow,
-        icon: image
-      });
-    };
+script src="https://gist.github.com/ianforsyth/db1d3280a1900afbc9aa.js"
 
 p Other cool features to keep an eye out for are the colorized hover on the footer sponsor logos, the fixed background header image on the home page and history page, the great history content, and the minimal but striking rides page.
 

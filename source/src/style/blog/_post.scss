@@ -59,14 +59,14 @@ $post-margin: 25px;
   &:hover { background: $light-charcoal; }
 }
 
-.post-codeblock {
-  max-height: 400px;
-  padding: $post-margin;
-  margin: 0 auto $post-margin auto;
-  font-size: 12px;
-  overflow: auto;
+.gist .gist-file {
   width: 90%;
-  background: $light-gray;
+  margin: 0 auto;
+  margin-bottom: $post-margin !important; // Overrides the standard gist margin
+}
+
+.gist-data {
+  max-height: 400px;
 }
 
 .post-video {

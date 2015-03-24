@@ -29,43 +29,7 @@ ul
 
 p Note: We check within 200 miles to eliminate points that could potentially overlap a certain zip code. The script doesn't take too long to complete and runs in O(n^2). It might not be the most efficient or error-proof method but it worked for our purposes. It returned about 100 unique zip codes. Those numbers check out considering the area of CONUS is 3,119,884.69 square miles (<a href="http://en.wikipedia.org/wiki/Contiguous_United_States">ref.</a>) and the area covered by 100 circles with a radius of 100 miles is 3,141,592.65 square miles. So we decided we would use this smaller subset to run our scraper.
 
-pre.post-codeblock
-  | // $zips is an array of all the zip codes you want to use in the algorithm
-    echo count($zips) . "\n";
-
-    // Looping through all the zips
-    for($i = 0; $i < count($zips); $i++){
-
-        // Store this because unsetting values will change the count in the inner loop
-        $the_count = count($zips);
-
-        for($j= $i +1; $j < $the_count; $j++) {
-            // Caclulate the distance bewteen two zip codes
-            $distance = distance($zips[$i]['latitude'], $zips[$i]['longitude'], $zips[$j]['latitude'], $zips[$j]['longitude']);
-
-            // Drop it from the list if it overlaps
-            if($distance < 200)
-                unset($zips[$j]);
-        }
-        // Re-index the array
-        $zips = array_values($zips);
-
-        // Debug output
-        echo $i . ": " . count($zips) . "\n";
-    }
-
-    // See your final list and manipulate accordingly
-    print_r($zips);
-
-    function distance($lat1, $lon1, $lat2, $lon2) {
-        $theta = $lon1 - $lon2;
-        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-        $dist = acos($dist);
-        $dist = rad2deg($dist);
-        $miles = $dist * 60 * 1.1515;
-
-        return $miles;
-    }
+script src="https://gist.github.com/ianforsyth/804096a2db8ddd31abbf.js"
 
 p I'd like to eventually go back and work on this more, it was a fun little script to work through. I'm sure there is a more efficient way to get it done that produces less error but for our needs, this served its purpose. If you have a better solution, get in touch and I'll post it here for everyone. Until then, feel free to use mine.
 
