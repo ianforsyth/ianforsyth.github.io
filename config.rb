@@ -13,20 +13,6 @@ require 'slim'
 #   page "/admin/*"
 # end
 
-activate :blog do |blog|
-  blog.prefix = 'blog'
-  blog.permalink = ':title.html'
-
-  blog.default_extension = '.slim'
-
-  blog.paginate = true
-  blog.per_page = 5
-
-  blog.tag_template = 'blog/tag.html'
-  blog.taglink = ':tag/index.html'
-end
-
-page "/blog/*", :layout => :blog_layout
 page "/docs/*", :layout => :docs_layout
 
 activate :directory_indexes
