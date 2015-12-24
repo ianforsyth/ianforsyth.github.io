@@ -1,5 +1,5 @@
 .socialmedia-link {
-  @include transition(.5s, color);
+  @include transition(.3s, color);
   position: relative;
   display: inline-block;
   font-size: 40px;
@@ -8,7 +8,8 @@
   &.icon-resume:hover { color: $resume-color; }
   &.icon-twitter:hover { color: $twitter-color; }
   &.icon-github:hover { color: $github-color; }
-  &.icon-linkedin:hover { color: $linkedin-color; }
+  &.icon-instagram:hover { color: $instagram-color; }
   &.icon-dribbble:hover { color: $dribbble-color; }
+  &.icon-medium:hover { color: $medium-color; }
 }
 
