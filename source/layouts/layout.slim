@@ -10,12 +10,10 @@ html
     /![if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]
 
   body
+    .sitewrapper
+      .ianforsyth-information
 
-    == yield
-
-    .footer
-      a.footer-logo.icon-logo href='/'
-      == partial 'social-media-icons'
+        == yield
 
     script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'
     / = javascript_include_tag 'jquery-1.11.2.min' - For offline working

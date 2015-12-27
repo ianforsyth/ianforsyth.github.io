@@ -1,9 +1,13 @@
+.socialmedia-links {
+  text-align: center;
+}
+
 .socialmedia-link {
   @include transition(.3s, color);
   position: relative;
   display: inline-block;
-  font-size: 40px;
-  margin: 5px;
+  font-size: 28px;
+  margin: 3px;
 
   &.icon-resume:hover { color: $resume-color; }
   &.icon-twitter:hover { color: $twitter-color; }
@@ -12,4 +16,3 @@
   &.icon-dribbble:hover { color: $dribbble-color; }
   &.icon-medium:hover { color: $medium-color; }
 }
-
