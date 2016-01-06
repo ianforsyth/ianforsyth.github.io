@@ -1,36 +1,36 @@
-.sitewrapper {
-  position: fixed;
-  height: 100%;
-  width: 100%;
+.ianforsyth {
   display: flex;
-  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: auto
 }
 
 .ianforsyth-information {
-  display: inline-block;
-  margin: auto;
   padding: 20px
 }
 
 .heading-name {
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
+  letter-spacing: 5px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .description {
   width: 100%;
-  max-width: 525px;
+  max-width: 560px;
   margin-top: 20px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
   font-family: Bitter;
 
   a {
-    text-decoration: underline;
+    color: $blue;
     &:hover {
       @include transition(.3s, color);
-      color: $blue;
+      color: lighten($blue, 5%);
     }
   }
 }
