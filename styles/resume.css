@@ -1,6 +1,41 @@
+@media print {
+  * { -webkit-print-color-adjust: exact; }
+
+  body {
+    background: none;
+    padding: 0;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .sitedoc {
+    box-shadow: none;
+    margin: 0;
+    box-shadow: 0;
+    padding: .25in;
+  }
+}
+
+@media screen {
+  body {
+    background: #C5C5C5;
+    padding: .5in;
+    min-width: 9.5in;
+    min-height: 12in;
+  }
+
+  .sitedoc {
+    background: white;
+    height: 11in;
+    width: 8.5in;
+    margin: 0 auto .5in auto;
+    box-shadow: 0px 0px 10px rgba(black, .5);
+    position: relative;
+  }
+}
+
 .resume-header {
-  @include clearfix;
-  background: $charcoal;
+  background: #253136;
   color: white;
   padding: .5in;
 }
@@ -57,7 +92,6 @@
 .resume-attr-secondarycontent {
   font-size: 8pt;
   font-weight: 300;
-
 }
 
 .resume-attr-date {

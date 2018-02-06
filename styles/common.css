@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+
+html{
+  font-size: 62.5%;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  height: 100%;
+  font-family: Lato
+}
+
+body,ul,li,p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+body{
+  min-width: 320px;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
