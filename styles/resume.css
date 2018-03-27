@@ -22,6 +22,7 @@
     padding: .5in;
     min-width: 9.5in;
     min-height: 12in;
+    zoom: 110%;
   }
 
   .sitedoc {
@@ -35,7 +36,7 @@
 }
 
 .resume-header {
-  background: #253136;
+  background: #072743;
   color: white;
   padding: .5in;
 }
@@ -43,13 +44,14 @@
 .resume-contactinfo { float: left; }
 
 .resume-contactinfo-name {
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 400;
   line-height: 42px;
 }
 
 .resume-contactinfo-details {
   font-size: 10pt;
+  font-weight: 400;
   margin-top: 10px;
 }
 
@@ -58,7 +60,8 @@
 .resume-socialmedia-tagline {
   margin-top: 6px;
   width: 350px;
-  font-size: 12pt;
+  font-weight: 400;
+  font-size: 11pt;
 }
 
 .resume-socialmedia-links {
