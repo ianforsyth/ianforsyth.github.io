@@ -98,20 +98,13 @@
   font-weight: 300;
 }
 
-.resume-attr-location {
+.resume-attr-locationDate {
   font-size: 6pt;
   position: absolute;
   right: 0;
   top: 8pt;
   font-weight: 300;
-}
-
-.resume-attr-date {
-  font-size: 6pt;
-  position: absolute;
-  right: 0;
-  top: 16pt;
-  font-weight: 300;
+  text-align: right;
 }
 
 @media print {
