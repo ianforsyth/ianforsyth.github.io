@@ -39,3 +39,11 @@ a{
   display: table;
   clear: both;
 }
+
+.heading-name{
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase
+}

@@ -22,14 +22,6 @@
   to   { top: 0px; }
 }
 
-.heading-name{
-  text-align: center;
-  font-size: 28px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase
-}
-
 .description{
   width: 100%;
   max-width: 580px;
@@ -43,7 +35,7 @@
   color: #299CA2
 }
 
-.description a: hover{
+.description a:hover{
   transition-property: color;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
