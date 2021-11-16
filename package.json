@@ -2,8 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "deploy": "next build  && next export",
+    "build": "next build && next export -o docs",
     "start": "next start",
     "type-check": "tsc"
   },
