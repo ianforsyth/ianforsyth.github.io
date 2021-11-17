@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 @layer components {
-  #__next {
-    @apply h-full;
-  }
   html,
   body {
     @apply h-full;
     @apply font-bitter;
   }
+}
+
+#__next {
+  @apply h-full;
 }
