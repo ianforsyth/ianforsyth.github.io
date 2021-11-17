@@ -41,23 +41,22 @@ const CenteredLayout = ({ children  })=>/*#__PURE__*/ react_jsx_runtime__WEBPACK
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const SPACING = '6';
 const H1 = ({ children , className  })=>{
-    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`first:mt-0 mt-${SPACING} font-lato font-semibold text-2xl uppercase tracking-wider`, className);
+    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()("first:mt-0 mt-6 font-lato font-semibold text-2xl uppercase tracking-wider", className);
     return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
         className: style,
         children: children
     }));
 };
 const H2 = ({ children , className  })=>{
-    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`first:mt-0 mt-${SPACING} -mb-${SPACING} font-lato font-semibold text-lg uppercase tracking-wider`, className);
+    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()("first:mt-0 mt-6 -mb-6 font-lato font-semibold text-lg uppercase tracking-wider", className);
     return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
         className: style,
         children: children
     }));
 };
 const A = ({ children , className , ...props })=>{
-    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`text-primary hover:text-primaryHover`, className);
+    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()("text-primary hover:text-primaryHover", className);
     return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
         className: style,
         ...props,
@@ -70,7 +69,7 @@ const A = ({ children , className , ...props })=>{
     }));
 };
 const P = ({ children , className , ...props })=>{
-    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`first:mt-0 mt-${SPACING}`, className);
+    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()("first:mt-0 mt-6", className);
     return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
         className: style,
         ...props,
@@ -78,7 +77,7 @@ const P = ({ children , className , ...props })=>{
     }));
 };
 const UL = ({ children , className , ...props })=>{
-    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`first:mt-0 mt-${SPACING} list-disc ml-${SPACING}`, className);
+    const style = classnames__WEBPACK_IMPORTED_MODULE_1___default()("first:mt-0 mt-6 list-disc ml-6", className);
     return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
         className: style,
         ...props,
