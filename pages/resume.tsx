@@ -9,10 +9,15 @@ type LineItemProps = {
 }
 
 const workExperience: LineItemProps[] = [{
+  title: "Relay",
+  description: "Relay is an end-to-end payment solution providing the logistics industry with instant, electronic and cashless payments.",
+  location: "Remote",
+  date: "August 2021 - Present"
+}, {
   title: "Team Engine",
-  description: "HR automation platform that helps blue-collar companies grow and engage their deskless workforces. Joined during the seed stage and work on a team of three doing design, product, customer success, and engineering. Built texting platform integrated with Twilio requiring new architecture, failover, and redundancy. Developed hiring practices to grow the engineering team.",
+  description: "HR automation platform that helps blue-collar companies grow and engage their worforce. Joined during the seed stage and helped grow from $30K to $1.2M ARR. Worked on a team of three doing design, product, customer success, and engineering. Built texting platform integrated with Twilio requiring new architecture, failover, and redundancy. Developed hiring practices to grow the engineering team.",
   location: "Boulder, CO",
-  date: "May 2019 - present"
+  date: "May 2019 - July 2021"
 }, {
   title: "VTS",
   description: "The #1 platform for commercial real estate leasing and asset management. Saw the company grow from 30 to 250+. Ran teams as tech lead, developed go-to market strategies for new product lines, participated in product UI/UX reviews, interviewed engineering and product manager candidates, and mentored engineering apprentices.",
@@ -55,7 +60,7 @@ const education: LineItemProps[] = [{
 }]
 
 const other: LineItemProps[] = [{
-  description: "Running, cycling, skiing, rowing, woodworking, cooking, chess",
+  description: "Running, cycling, skiing, rowing, woodworking, dog training, chess",
 }]
 
 const LineItem = ({ title, description, subtext, location, date, type }: LineItemProps & { type?: string }) => (
