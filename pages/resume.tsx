@@ -37,7 +37,7 @@ const workExperience: LineItemProps[] = [{
 const projects: LineItemProps[] = [{
   title: "PR Patrol",
   description: "Side project GitHub app with ~150 users that lets users monitor pull requests and get alerted when specific changes are proposed. Responsible for all parts of the development process from design to architecture to marketing. Built with React frontend, Ruby API backend and integrated with GitHub, SendGrid, and Slack APIs.",
-  date: "March 2018 - present"
+  date: "March 2018 - March 2022"
 }]
 
 const skills: LineItemProps[] = [{

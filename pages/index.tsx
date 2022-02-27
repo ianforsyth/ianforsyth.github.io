@@ -16,8 +16,8 @@ const IndexPage = () => (
         <A href="https://www.vts.com/">VTS</A>.{" "}
       </P>
       <P>
-        On the side I maintain{" "}
-        <A href="https://prpatrol.com/">PR Patrol</A>{" "}
+        On the side I'm building and growing{" "}
+        <A href="https://hoahq.co/">hoaHQ</A>{" "}
         and build pieces for my woodworking brand{" "}
         <A href="https://maplevein.com/">Maple Vein</A>.
         <P>
