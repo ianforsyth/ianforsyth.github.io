@@ -10,7 +10,7 @@ type LineItemProps = {
 
 const workExperience: LineItemProps[] = [{
   title: "Relay",
-  description: "Relay is an end-to-end payment solution providing the logistics industry with instant, electronic and cashless payments.",
+  description: "Relay is an end-to-end payment solution providing the logistics industry with instant, electronic and cashless payments. Initially was in charge of creating and implementing a new design system for a UI overall and then working on fuel incentive credit cards. Then moved into a tech lead role for the parking vertical, managing four other engineers and helping with product direction. Working in typescript and golang",
   location: "Remote",
   date: "August 2021 - Present"
 }, {
@@ -42,7 +42,7 @@ const projects: LineItemProps[] = [{
 
 const skills: LineItemProps[] = [{
   title: "Technologies",
-  description: "Ruby/Rails, Javascript (Express, React), C++, PostgreSQL, MySQL, Redis, CSS/Sass, Git, Heroku, AWS CI/CD, AWS Lambda, CSS/Sass, Figma, Vim",
+  description: "Ruby/Rails, Golang, Javascript/Typescript (Express, React), C++, PostgreSQL, MySQL, Redis, CSS/Sass, Tailwind, Git, Heroku, AWS CI/CD, AWS Lambda, Figma, Vim",
 }, {
   title: "People",
   description: "Engineering team lead, interfacing with product/design/sales/marketing, roadmap planning, peer and direct report reviews, interviewing, user research",
