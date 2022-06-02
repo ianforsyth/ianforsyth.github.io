@@ -10,7 +10,7 @@ type LineItemProps = {
 
 const workExperience: LineItemProps[] = [{
   title: "Relay",
-  description: "Relay is an end-to-end payment solution providing the logistics industry with instant, electronic and cashless payments. Initially was in charge of creating and implementing a new design system for a UI overall and then working on fuel incentive credit cards. Then moved into a tech lead role for the parking vertical, managing four other engineers and helping with product direction. Working in typescript and golang",
+  description: "Relay is an end-to-end payment solution for the trucking and logistics industry. Initially was in charge of creating a new design system for a UI overhaul and then working on fuel incentive credit cards. Then moved into a tech lead role for the parking vertical, managing four other engineers and helping with product direction. Working in typescript and golang",
   location: "Remote",
   date: "August 2021 - Present"
 }, {
