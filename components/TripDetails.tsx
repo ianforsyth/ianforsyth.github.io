@@ -47,8 +47,8 @@ export const TripDetails = ({ title, party, dateStart, dateEnd, itinerary, other
           times a day (first thing in the morning, lunch break, and before turning in for the night). We&apos;ll also be 
           able to send messages or an SOS to search and rescue in a worst case scenario.
         </P>
-        <P className="mt-8 text-sm">
-          Feel free to share this page with family and friends.
+        <P className="mt-8 text-sm font-bold">
+          *Feel free to share this page with family and friends.
         </P>
       </div>
     </Layout>
