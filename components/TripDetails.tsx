@@ -22,6 +22,10 @@ export const TripDetails = ({ title, party, dateStart, dateEnd, itinerary, other
       <div className="p-10 font-lato max-w-5xl mx-auto">
         <H1>{title}</H1>
         <P>{dateStart} - {dateEnd}</P>
+        <H2>Party</H2>
+        <UL>
+          {party.map(person => <LI className="list-disc ml-6">{person}</LI>)}
+        </UL>
         <H2>Itinerary</H2>
         <UL>
           {itinerary.map(({ item, link, linkName }) => <LI>{item}{link && <span> - <A href={link}>{linkName || "link"}</A></span>}</LI>)}
@@ -34,10 +38,6 @@ export const TripDetails = ({ title, party, dateStart, dateEnd, itinerary, other
             </UL>
           </>
         )}
-        <H2>Party</H2>
-        <UL>
-          {party.map(person => <LI className="list-disc ml-6">{person}</LI>)}
-        </UL>
         <H2>Emergency Contact Info</H2>
         <P>
           Cell service may be limited. We&apos;ll have a satellite communication device with us for safety. If there's an 
