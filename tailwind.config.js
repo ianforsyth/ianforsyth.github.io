@@ -11,6 +11,13 @@ module.exports = {
         lato: ["Lato", "cursive"],
         bitter: ["Bitter", "cursive"],
       },
+      screens: {
+        print: { raw: 'print' },
+      },
+      padding: {
+        '0.25in': '0.25in',
+        '0.5in': '0.5in',
+      }
     },
   },
   variants: {

@@ -80,9 +80,9 @@ const LineItem = ({ title, description, subtext, location, date, type }: LineIte
 
 const ResumePage = () => (
   <Layout title="Resume">
-    <div className="font-lato flex justify-center leading-tight" style={{ background: "#C5C5C5", padding: '0.5in' }}>
+    <div className="font-lato flex justify-center leading-tight p-0.5in print:p-0" style={{ background: "#C5C5C5" }}>
       <div style={{ height: '11in', width: '8.5in', background: "#FFFFFF" }}>
-        <div className="flex justify-between w-full" style={{ color: "white", background: "#072743", padding: "0.5in" }}>
+        <div className="flex justify-between w-full p-0.5in" style={{ color: "white", background: "#072743" }}>
           <div>
             <div className="text-5xl mb-2">Ian Forsyth</div>
             <div style={{ fontSize: '10pt' }}>
