@@ -10,7 +10,7 @@ type LineItemProps = {
 
 const workExperience: LineItemProps[] = [{
   title: "Relay",
-  description: "Relay is an end-to-end payment solution for the trucking and logistics industry. Initially was in charge of creating a new design system for a UI overhaul and then working on fuel incentive credit cards. Then moved into a tech lead role for the parking vertical, managing four other engineers and helping with product direction. Working in typescript and golang",
+  description: "Relay is an end-to-end payment solution for the trucking and logistics industry. Initially was in charge of creating a new design system for a UI overhaul and then working on fuel incentive credit cards. Then moved into a tech lead role for the parking vertical, managing four other engineers and helping with product direction. Working in typescript and golang.",
   location: "Remote",
   date: "August 2021 - Present"
 }, {
@@ -35,7 +35,11 @@ const workExperience: LineItemProps[] = [{
 }]
 
 const projects: LineItemProps[] = [{
-  title: "PR Patrol",
+  title: "hoaHQ",
+  description: "Web app for HOA management companies to handle all aspects of their business, currently in beta and active development with 2 customers. Found out http://hoahq.co",
+  date: "January 2022 - Present"
+}, {
+  title: "PR Patrol (sunset)",
   description: "Side project GitHub app with ~150 users that lets users monitor pull requests and get alerted when specific changes are proposed. Responsible for all parts of the development process from design to architecture to marketing. Built with React frontend, Ruby API backend and integrated with GitHub, SendGrid, and Slack APIs.",
   date: "March 2018 - March 2022"
 }]
