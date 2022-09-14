@@ -8,9 +8,11 @@ const IndexPage = () => (
       <img src='/photo.png' className="m-auto" style={{ maxWidth: '250px' }} />
       <H1 className="text-center">Ian Forsyth</H1>
       <P>
-        I'm a full-stack engineer based in Boulder, CO. Right now I'm helping to build{" "}
+        I'm a full-stack engineer based in Boulder, CO. Right now I'm helping to keep athletes connected at{" "}
+        <A href="https://www.strava.com/">Strava</A>.{" "}
+        Before that I worked at{" "}
         <A href="https://www.relaypayments.com/">Relay</A>{" "}
-        and before that I was part of the great early teams at{" "}
+        and was part of the great early teams at{" "}
         <A href="https://www.teamengine.io/">Team Engine</A>{" "}
         and{" "}
         <A href="https://www.vts.com/">VTS</A>.{" "}
@@ -18,12 +20,12 @@ const IndexPage = () => (
       <P>
         On the side I'm building and growing{" "}
         <A href="https://hoahq.co/">hoaHQ</A>{" "}
-        and build pieces for my woodworking brand{" "}
+        and craft pieces for my woodworking brand{" "}
         <A href="https://maplevein.com/">Maple Vein</A>.
         <P>
         </P>
         When I'm not in front of the computer, you'll find me outside trail
-        running, cycling, skiing, and hanging with my dog Gonzo.
+        running, backpacking, skiing, and hanging with my dog Gonzo.
       </P>
       <P className="text-xs">
         You can check out my code on
