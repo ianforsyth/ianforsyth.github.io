@@ -17,15 +17,7 @@ const IndexPage = () => (
         and{" "}
         <A href="https://www.vts.com/">VTS</A>.{" "}
       </P>
-<!--       
-       <P>
-        On the side I'm building and growing{" "}
-        <A href="https://hoahq.co/">hoaHQ</A>{" "}
-        and craft pieces for my woodworking brand{" "}
-        <A href="https://maplevein.com/">Maple Vein</A>.
-      <P> 
--->
-      </P>
+      <P>
         When I'm not in front of the computer, you'll find me behind the 
         woodworking bench, hanging with my dog Gonzo, or 
         outside trail running, backpacking, and skiing.
