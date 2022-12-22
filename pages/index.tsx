@@ -22,7 +22,7 @@ const IndexPage = () => (
         woodworking bench, hanging with my dog Gonzo, or 
         outside trail running, backpacking, and skiing.
       </P>
-      <P className="text-xs">
+      <P>
         You can check out my code on
         <A href="https://github.com/ianforsyth">Github</A>,{" "}
         my designs on{" "}
