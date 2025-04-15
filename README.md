@@ -2,4 +2,6 @@ My personal website that lives at [https://ianforsyth.com](https://ianforsyth.co
 
 Built with [Next.js](https://nextjs.org/)
 
-To deploy run `yarn build` that will create a docs directory you can commit and push
+To deploy
+- `yarn install`
+- `yarn build` creates a docs directory to commit and push
