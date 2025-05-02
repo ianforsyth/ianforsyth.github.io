@@ -8,13 +8,12 @@ const P = ({ className, ...props }: React.ComponentProps<"div">) => <div {...pro
 const UL = ({ className, ...props }: React.ComponentProps<"ul">) => <ul {...props} className={cn(className, "mt-2")} />
 const LI = ({ className, ...props }: React.ComponentProps<"li">) => <li {...props} className={cn(className, "ml-6 list-disc")} />
 
-export const TripDetails = ({ title, party, dateStart, dateEnd, itinerary, otherDetails, children }: { 
+export const TripDetails = ({ title, party, dateStart, dateEnd, itinerary, otherDetails }: { 
   title: string, 
   dateStart: string,
   dateEnd: string,
   party: string[],
   itinerary: { item: string, link?: string, linkName?: string }[],
-  children: React.ReactNode,
   otherDetails?: string[],
 }) => {
   return (

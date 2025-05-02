@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
       primary: '#299CA2',
@@ -8,8 +7,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        lato: ["Lato", "cursive"],
-        bitter: ["Bitter", "cursive"],
+        lato: ["Lato", "sans-serif"],
+        bitter: ["Bitter", "serif"],
       },
       screens: {
         print: { raw: 'print' },
@@ -19,10 +18,6 @@ module.exports = {
         '0.5in': '0.5in',
       }
     },
-  },
-  variants: {
-    margin: ['first'],
-    extend: {},
   },
   plugins: [],
 }

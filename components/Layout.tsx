@@ -4,14 +4,11 @@ import Head from 'next/head'
 const Layout = ({ children, title }: { children: ReactNode, title?: string }) => (
   <>
     <Head>
-      <title>Ian Forsyth{title && ` - ${title}`}</title>
+      <title>{`Ian Forsyth${title ? ` - ${title}` : ''}`}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-      {/* Google fonts */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+      {/* Google Fonts loaded via globals.scss */}
 
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
