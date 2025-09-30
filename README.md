@@ -1,7 +1,5 @@
 My personal website that lives at [https://ianforsyth.com](https://ianforsyth.com)
 
-Built with [Next.js](https://nextjs.org/)
+Simple static HTML site served via GitHub Pages from the root of the master branch.
 
-To deploy
-- `yarn install`
-- `yarn build` creates a docs directory to commit and push
+To deploy: Just push changes to master.
